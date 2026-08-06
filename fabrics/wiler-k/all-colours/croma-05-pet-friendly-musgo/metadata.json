@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wiler-k-croma-05-pet-friendly-musgo",
+  "name": "Croma 05 Pet Friendly Sarjado Peletizado Musgo",
+  "supplier": "Wiler K",
+  "brand": null,
+  "collection": "All Colours",
+  "reference": "05",
+  "color": {
+    "name": "Musgo",
+    "family": "verde"
+  },
+  "category": "tecido para estofado",
+  "fabric_type": "sarjado peletizado",
+  "composition_percent": {
+    "polyester": 100
+  },
+  "width_m": 1.4,
+  "weight_per_linear_meter_g": 400,
+  "origin": "nacional",
+  "technologies": [
+    "Pet Friendly",
+    "Waterproof"
+  ],
+  "appearance": {
+    "texture": "sarja peletizada lisa",
+    "touch": "macio",
+    "sheen": "baixo",
+    "visual_character": [
+      "contemporâneo",
+      "acolhedor",
+      "natural",
+      "funcional"
+    ]
+  },
+  "performance": {
+    "durability": "alta resistência ao desgaste",
+    "water_repellency": true,
+    "pet_friendly": true,
+    "easy_clean": true,
+    "indoor_use": true,
+    "outdoor_use": true
+  },
+  "applications": [
+    "poltrona",
+    "sofá",
+    "mesa posta",
+    "estofados residenciais"
+  ],
+  "care": [
+    "não lavar",
+    "não alvejar",
+    "não secar em tambor",
+    "não passar ou vaporizar",
+    "limpar com pano úmido"
+  ],
+  "commercial_intelligence": {
+    "recommended_for": [
+      "casas com cães ou gatos",
+      "famílias que priorizam manutenção simples",
+      "ambientes de uso frequente",
+      "clientes que desejam cor natural com desempenho técnico"
+    ],
+    "advantages": [
+      "repelência a líquidos",
+      "boa resistência ao desgaste",
+      "toque macio",
+      "adequado a rotinas domésticas intensas"
+    ],
+    "restrictions": [
+      "impermeabilidade não elimina a necessidade de remoção rápida de líquidos",
+      "a tonalidade exibida em tela pode variar",
+      "cuidados de lavagem são restritivos"
+    ],
+    "suggested_styles": [
+      "biofílico",
+      "contemporâneo",
+      "casual sofisticado",
+      "natural urbano"
+    ],
+    "suggested_combinations": [
+      "madeira clara ou média",
+      "tons areia, bege e cru",
+      "preto fosco",
+      "estampas botânicas ou geométricas discretas"
+    ]
+  },
+  "physical_reference_cm": {
+    "width": 120,
+    "height": 60
+  },
+  "assets": {
+    "base_color": "base color.webp",
+    "normal": "normal map.webp",
+    "ao": "AO.webp",
+    "preview": null,
+    "storage_status": "google_drive_only"
+  },
+  "sources": [
+    {
+      "type": "supplier_product_page",
+      "url": "https://www.wiler.com.br/tecido-para-sofa-croma-05-sarjado-mescl-pelet-musg/p",
+      "verified_on": "2026-08-06"
+    }
+  ],
+  "research": {
+    "status": "verified",
+    "confidence": "high",
+    "notes": "Composição, tecnologias, aplicações, origem, largura, gramatura e cuidados confirmados na página da Wiler K. Inteligência comercial derivada dessas características."
+  }
+}
