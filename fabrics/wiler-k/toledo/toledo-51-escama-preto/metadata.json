@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wiler-k-toledo-51-escama-preto",
+  "name": "Toledo 51 Escama Preto",
+  "supplier": "Wiler K",
+  "brand": null,
+  "collection": "Toledo",
+  "reference": "51",
+  "color": {
+    "name": "Escama Preto",
+    "family": "preto"
+  },
+  "category": "tecido para estofado",
+  "fabric_type": "rústico com fibras naturais e sintéticas",
+  "composition_percent": {
+    "polypropylene": 59.69,
+    "polyester": 18.95,
+    "linen": 12.09,
+    "viscose": 5.24,
+    "acrylic": 4.03
+  },
+  "width_m": 1.4,
+  "weight_per_linear_meter_g": 494,
+  "origin": null,
+  "technologies": [],
+  "appearance": {
+    "texture": "trama rústica e aparente",
+    "touch": "confortável, com leitura de fibras naturais",
+    "sheen": "baixo",
+    "visual_character": [
+      "rústico",
+      "sofisticado",
+      "texturizado",
+      "marcante"
+    ]
+  },
+  "performance": {
+    "durability": "alta resistência associada às fibras sintéticas",
+    "water_repellency": false,
+    "pet_friendly": false,
+    "easy_clean": false,
+    "indoor_use": true,
+    "outdoor_use": false
+  },
+  "applications": [
+    "poltrona",
+    "sofá",
+    "puff",
+    "almofada",
+    "estofados internos"
+  ],
+  "care": [
+    "não lavar",
+    "não alvejar",
+    "não secar em tambor",
+    "secar à sombra",
+    "passar até 110 °C",
+    "limpeza a seco com solvente específico"
+  ],
+  "commercial_intelligence": {
+    "recommended_for": [
+      "clientes que procuram presença visual e textura",
+      "ambientes internos sofisticados com linguagem natural ou industrial",
+      "propostas monocromáticas, urbanas ou de alto contraste"
+    ],
+    "advantages": [
+      "combina conforto visual de fibras naturais com resistência sintética",
+      "trama marcante valoriza volumes e curvas da poltrona KARV",
+      "preto facilita combinações com madeira, metal, concreto e estampas claras"
+    ],
+    "restrictions": [
+      "não possui impermeabilidade confirmada",
+      "exige conservação mais cuidadosa e limpeza especializada",
+      "pode apresentar variação de tonalidade entre lotes"
+    ],
+    "suggested_styles": [
+      "industrial",
+      "contemporâneo",
+      "rústico sofisticado",
+      "minimalista escuro"
+    ],
+    "suggested_combinations": [
+      "madeira natural",
+      "metal preto",
+      "tons areia e cru",
+      "estampas geométricas claras"
+    ]
+  },
+  "physical_reference_cm": {
+    "width": 120,
+    "height": 60
+  },
+  "assets": {
+    "base_color": "base color.webp",
+    "normal": "Nomal Map.webp",
+    "ao": "AO.webp",
+    "preview": null,
+    "storage_status": "google_drive_only"
+  },
+  "sources": [
+    {
+      "type": "supplier_product_page",
+      "url": "https://www.wiler-k.com.br/tecido-para-sofa-toledo-51-escama-preto-escl/p",
+      "verified_on": "2026-08-06"
+    }
+  ],
+  "research": {
+    "status": "verified",
+    "confidence": "high",
+    "notes": "Dados técnicos e aplicações confirmados na página oficial da Wiler K. Inteligência comercial derivada das características verificadas do material."
+  }
+}
