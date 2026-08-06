@@ -6,22 +6,37 @@
       "id": "wiler-k-toledo-51-escama-preto",
       "name": "Toledo 51 Escama Preto",
       "metadata": "../fabrics/wiler-k/toledo/toledo-51-escama-preto/metadata.json",
-      "asset_status": "google_drive_only",
-      "ready_for_configurator": false
+      "assets": {
+        "base_color": "../fabrics/wiler-k/toledo/toledo-51-escama-preto/base-color.webp",
+        "preview": "../fabrics/wiler-k/toledo/toledo-51-escama-preto/preview.webp"
+      },
+      "asset_status": "base_color_preview_published",
+      "ready_for_configurator": true,
+      "pbr_ready": false
     },
     {
       "id": "wiler-k-croma-05-pet-friendly-musgo",
       "name": "Croma 05 Pet Friendly Sarjado Peletizado Musgo",
       "metadata": "../fabrics/wiler-k/all-colours/croma-05-pet-friendly-musgo/metadata.json",
-      "asset_status": "google_drive_only",
-      "ready_for_configurator": false
+      "assets": {
+        "base_color": "../fabrics/wiler-k/all-colours/croma-05-pet-friendly-musgo/base-color.webp",
+        "preview": "../fabrics/wiler-k/all-colours/croma-05-pet-friendly-musgo/preview.webp"
+      },
+      "asset_status": "base_color_preview_published",
+      "ready_for_configurator": true,
+      "pbr_ready": false
     },
     {
       "id": "wiler-k-milano-02-bege",
       "name": "Veludo Milano 02 Bege",
       "metadata": "../fabrics/wiler-k/milano/milano-02-bege/metadata.json",
-      "asset_status": "google_drive_only",
-      "ready_for_configurator": false
+      "assets": {
+        "base_color": "../fabrics/wiler-k/milano/milano-02-bege/base-color.webp",
+        "preview": "../fabrics/wiler-k/milano/milano-02-bege/preview.webp"
+      },
+      "asset_status": "base_color_preview_published",
+      "ready_for_configurator": true,
+      "pbr_ready": false
     }
   ]
 }

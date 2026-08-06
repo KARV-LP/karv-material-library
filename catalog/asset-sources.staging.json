@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "status": "staging_only",
+  "note": "Fontes temporárias do Google Drive. Não devem ser consumidas em produção; substituir por URLs públicas estáveis após publicação dos binários.",
+  "items": [
+    {
+      "id": "wiler-k-toledo-51-escama-preto",
+      "target_directory": "fabrics/wiler-k/toledo/toledo-51-escama-preto",
+      "sources": {
+        "base_color": {
+          "drive_file_id": "1luKuX1v8_hR0QaSs6SkYKVf2c4-BcIEu",
+          "target_name": "base-color.webp"
+        },
+        "normal": {
+          "drive_file_id": "1yzEha3_KP9LjggdfAOCmm1Ky5BkkHG4a",
+          "target_name": "normal.webp"
+        },
+        "ao": {
+          "drive_file_id": "1ucLgjrTtHPnt7DhilwhV2dG8y2CjQWaw",
+          "target_name": "ao.webp"
+        }
+      }
+    },
+    {
+      "id": "wiler-k-croma-05-pet-friendly-musgo",
+      "target_directory": "fabrics/wiler-k/all-colours/croma-05-pet-friendly-musgo",
+      "sources": {
+        "base_color": {
+          "drive_file_id": "1tY7PkcpPa7Fkguqp0iwvBznV_dIACbl4",
+          "target_name": "base-color.webp"
+        },
+        "normal": {
+          "drive_file_id": "1i6-oP_XVh0aPyyhq4co3bV8vnVdgveZc",
+          "target_name": "normal.webp"
+        },
+        "ao": {
+          "drive_file_id": "1eKKGS0yL8oMJJ9sSTpTnCkJ0n7ZK_akV",
+          "target_name": "ao.webp"
+        }
+      }
+    },
+    {
+      "id": "wiler-k-milano-02-bege",
+      "target_directory": "fabrics/wiler-k/milano/milano-02-bege",
+      "sources": {
+        "base_color": {
+          "drive_file_id": "14k-bTcSCy-qVvAwpGAwAHuxAkJTVFmzO",
+          "target_name": "base-color.webp"
+        },
+        "normal": {
+          "drive_file_id": "1OlqjZcoIaAJkRz0wi9XvjzsUV5AqxIo7",
+          "target_name": "normal.webp"
+        },
+        "ao": {
+          "drive_file_id": "1hTwXg1pM9zcVRV0cfq_KbP88TWp_oxMM",
+          "target_name": "ao.webp"
+        }
+      }
+    }
+  ]
+}
