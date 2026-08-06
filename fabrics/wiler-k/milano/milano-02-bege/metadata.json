@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wiler-k-milano-02-bege",
+  "name": "Veludo Milano 02 Bege",
+  "supplier": "Wiler K",
+  "brand": null,
+  "collection": "Milano",
+  "reference": "02",
+  "color": {
+    "name": "Bege",
+    "family": "bege"
+  },
+  "category": "tecido para estofado",
+  "fabric_type": "veludo liso",
+  "composition_percent": {
+    "polyester": 100
+  },
+  "width_m": 1.4,
+  "weight_per_linear_meter_g": null,
+  "origin": "importado",
+  "technologies": [],
+  "appearance": {
+    "texture": "veludo liso",
+    "touch": "macio",
+    "sheen": "suave e característico do veludo",
+    "visual_character": [
+      "elegante",
+      "aconchegante",
+      "sofisticado",
+      "neutro"
+    ]
+  },
+  "performance": {
+    "durability": "resistente",
+    "water_repellency": false,
+    "pet_friendly": false,
+    "easy_clean": false,
+    "indoor_use": true,
+    "outdoor_use": false
+  },
+  "applications": [
+    "poltrona",
+    "sofá",
+    "cadeira",
+    "almofada",
+    "estofados internos"
+  ],
+  "care": [
+    "não lavar",
+    "não alvejar",
+    "não secar em tambor",
+    "não passar",
+    "limpeza profissional a úmido"
+  ],
+  "commercial_intelligence": {
+    "recommended_for": [
+      "clientes que procuram conforto tátil e aparência premium",
+      "ambientes internos elegantes e acolhedores",
+      "propostas neutras que valorizam forma, iluminação e acabamento"
+    ],
+    "advantages": [
+      "toque macio",
+      "cor bege versátil",
+      "brilho discreto que responde bem à iluminação",
+      "boa leitura de volume em peças estofadas"
+    ],
+    "restrictions": [
+      "não possui impermeabilidade confirmada",
+      "pode marcar o sentido do pelo e alterar a leitura da cor conforme a luz",
+      "exige limpeza profissional"
+    ],
+    "suggested_styles": [
+      "contemporâneo",
+      "clássico atualizado",
+      "minimalista quente",
+      "hotelaria residencial"
+    ],
+    "suggested_combinations": [
+      "madeira clara ou nogueira",
+      "tons terracota, verde oliva e marrom",
+      "metais dourados ou pretos",
+      "estampas de baixo contraste"
+    ]
+  },
+  "physical_reference_cm": {
+    "width": 120,
+    "height": 60
+  },
+  "assets": {
+    "base_color": "base color.webp",
+    "normal": "normal map.webp",
+    "ao": "AO.webp",
+    "preview": null,
+    "storage_status": "google_drive_only"
+  },
+  "sources": [
+    {
+      "type": "supplier_category_listing",
+      "url": "https://www.wiler-k.com.br/tecidos-para-sofa/veludo/Lisos/Bege/Veludo?PS=36&map=c%2Cc%2CspecificationFilter_60%2CspecificationFilter_57%2CspecificationFilter_52",
+      "verified_on": "2026-08-06",
+      "scope": "confirma produto, referência, cor, categoria e largura"
+    },
+    {
+      "type": "same_collection_variant",
+      "url": "https://www.wiler.com.br/tecido-para-sofa--veludo-galaxy-03-cinza/p",
+      "verified_on": "2026-08-06",
+      "scope": "especificações da coleção Milano em outra cor"
+    }
+  ],
+  "research": {
+    "status": "partially_verified",
+    "confidence": "medium",
+    "notes": "A existência do Milano 02 Bege e sua largura foram confirmadas na listagem oficial. Composição, origem, resistência e cuidados foram obtidos de outra cor da mesma coleção Milano e devem ser reconfirmados quando a página específica estiver acessível. Inteligência comercial derivada das propriedades verificadas do veludo."
+  }
+}
