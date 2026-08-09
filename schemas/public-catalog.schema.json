@@ -29,6 +29,47 @@
       "items": { "type": "string", "minLength": 1 },
       "uniqueItems": true
     },
+    "assetIntegrityEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sha256", "width_px", "height_px", "bytes"],
+      "properties": {
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "width_px": { "type": "integer", "minimum": 1 },
+        "height_px": { "type": "integer", "minimum": 1 },
+        "bytes": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "assetIntegrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["base_color", "normal", "ao"],
+      "properties": {
+        "base_color": { "$ref": "#/$defs/assetIntegrityEntry" },
+        "normal": { "$ref": "#/$defs/assetIntegrityEntry" },
+        "ao": { "$ref": "#/$defs/assetIntegrityEntry" }
+      }
+    },
+    "pbr": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "roughness_factor",
+        "metalness",
+        "normal_convention",
+        "normal_strength",
+        "ao_strength"
+      ],
+      "properties": {
+        "status": { "enum": ["preview", "production"] },
+        "roughness_factor": { "type": "number", "minimum": 0, "maximum": 1 },
+        "metalness": { "const": 0 },
+        "normal_convention": { "const": "opengl" },
+        "normal_strength": { "type": "number", "minimum": 0, "maximum": 2 },
+        "ao_strength": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
     "material": {
       "type": "object",
       "additionalProperties": false,
@@ -108,6 +149,8 @@
             "ao": { "$ref": "#/$defs/nullableAsset" }
           }
         },
+        "asset_integrity": { "$ref": "#/$defs/assetIntegrity" },
+        "pbr": { "$ref": "#/$defs/pbr" },
         "published": { "const": true },
         "ready_for_configurator": { "const": true },
         "pbr_ready": { "type": "boolean" },
@@ -125,7 +168,18 @@
             "min_geometry_version": { "type": "integer", "minimum": 1 }
           }
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "pbr_ready": { "const": true } }, "required": ["pbr_ready"] },
+          "then": {
+            "required": ["pbr", "asset_integrity"],
+            "properties": {
+              "pbr": { "properties": { "status": { "const": "production" } } }
+            }
+          }
+        }
+      ]
     }
   }
 }
