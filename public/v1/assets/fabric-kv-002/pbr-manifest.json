@@ -1,0 +1,16 @@
+{
+  "schema": "karv.web-pbr-asset-set/1",
+  "material_id": "fabric-kv-002",
+  "source": {
+    "base_color_sha256": "d93454ccd522d5595079f7584deae4b7ca519218d999c3fa6e42039f614135a2",
+    "normal_sha256": "56bb75d1a95c6407e7aa61b04ba25846c30d43d8815e5e12dc559417731d3218",
+    "ao_sha256": "9e83bc7ed0201c8af092524ea02dd536161e46f2528977c6ae9658aba3b28bdd"
+  },
+  "web": {
+    "width_px": 2048,
+    "height_px": 1024,
+    "base_color": { "sha256": "3d35f033862c3b074fe1d95ac0b49f7a571e6bf92f8ad13227695b451f428ce4", "bytes": 512800 },
+    "normal": { "sha256": "ca5c973c4b418070b570eaecfe373bdb4cc444f3e5cd6ce7fe9e67e602e26763", "bytes": 1524084 },
+    "ao": { "sha256": "f75af19f92e6aa54c049f41b72f0ca6fb2410a473f22e6ebbdf8d7f9033d84c7", "bytes": 328640 }
+  }
+}

@@ -63,12 +63,40 @@
       "assets": {
         "preview": "./assets/fabric-kv-002/preview.webp",
         "base_color": "./assets/fabric-kv-002/base-color.webp",
-        "normal": null,
-        "ao": null
+        "normal": "./assets/fabric-kv-002/normal.webp",
+        "ao": "./assets/fabric-kv-002/ao.webp"
+      },
+      "asset_integrity": {
+        "base_color": {
+          "sha256": "3d35f033862c3b074fe1d95ac0b49f7a571e6bf92f8ad13227695b451f428ce4",
+          "width_px": 2048,
+          "height_px": 1024,
+          "bytes": 512800
+        },
+        "normal": {
+          "sha256": "ca5c973c4b418070b570eaecfe373bdb4cc444f3e5cd6ce7fe9e67e602e26763",
+          "width_px": 2048,
+          "height_px": 1024,
+          "bytes": 1524084
+        },
+        "ao": {
+          "sha256": "f75af19f92e6aa54c049f41b72f0ca6fb2410a473f22e6ebbdf8d7f9033d84c7",
+          "width_px": 2048,
+          "height_px": 1024,
+          "bytes": 328640
+        }
+      },
+      "pbr": {
+        "status": "production",
+        "roughness_factor": 0.88,
+        "metalness": 0,
+        "normal_convention": "opengl",
+        "normal_strength": 1,
+        "ao_strength": 1
       },
       "published": true,
       "ready_for_configurator": true,
-      "pbr_ready": false,
+      "pbr_ready": true,
       "compatibility": {
         "geometry_ids": ["karv-chair"],
         "min_geometry_version": 2
