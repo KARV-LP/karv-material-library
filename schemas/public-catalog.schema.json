@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://k-arv.com/schemas/public-material-catalog-v1.schema.json",
+  "title": "KARV Public Material Catalog v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "channels", "materials"],
+  "properties": {
+    "schema": { "const": "karv.public-material-catalog/1" },
+    "channels": {
+      "type": "array",
+      "items": { "enum": ["fabric", "karv_design"] },
+      "uniqueItems": true,
+      "contains": { "const": "fabric" },
+      "minItems": 2
+    },
+    "materials": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/material" }
+    }
+  },
+  "$defs": {
+    "nullableAsset": {
+      "type": ["string", "null"],
+      "pattern": "^\\./assets/[a-z0-9-]+/[a-z0-9.-]+$"
+    },
+    "stringArray": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "material": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "channel",
+        "name",
+        "collection",
+        "color",
+        "material_type",
+        "technologies",
+        "functional",
+        "appearance",
+        "physical_reference_cm",
+        "assets",
+        "published",
+        "ready_for_configurator",
+        "pbr_ready",
+        "compatibility"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^fabric-kv-[0-9]{3,}$|^design-kv-[0-9]{3,}$" },
+        "channel": { "enum": ["fabric", "karv_design"] },
+        "name": { "type": "string", "minLength": 1 },
+        "collection": { "type": "string", "minLength": 1 },
+        "color": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "family"],
+          "properties": {
+            "name": { "type": "string", "minLength": 1 },
+            "family": { "type": "string", "minLength": 1 }
+          }
+        },
+        "material_type": { "type": "string", "minLength": 1 },
+        "technologies": { "$ref": "#/$defs/stringArray" },
+        "functional": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["pet_friendly", "water_repellency", "easy_clean", "indoor_use", "outdoor_use"],
+          "properties": {
+            "pet_friendly": { "type": ["boolean", "null"] },
+            "water_repellency": { "type": ["boolean", "null"] },
+            "easy_clean": { "type": ["boolean", "null"] },
+            "indoor_use": { "type": ["boolean", "null"] },
+            "outdoor_use": { "type": ["boolean", "null"] }
+          }
+        },
+        "appearance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["texture", "touch", "sheen", "visual_character"],
+          "properties": {
+            "texture": { "type": ["string", "null"] },
+            "touch": { "type": ["string", "null"] },
+            "sheen": { "type": ["string", "null"] },
+            "visual_character": { "$ref": "#/$defs/stringArray" }
+          }
+        },
+        "physical_reference_cm": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["width", "height"],
+          "properties": {
+            "width": { "type": "number", "exclusiveMinimum": 0 },
+            "height": { "type": "number", "exclusiveMinimum": 0 }
+          }
+        },
+        "assets": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["preview", "base_color", "normal", "ao"],
+          "properties": {
+            "preview": { "type": "string", "pattern": "^\\./assets/[a-z0-9-]+/preview\\.webp$" },
+            "base_color": { "type": "string", "pattern": "^\\./assets/[a-z0-9-]+/base-color\\.webp$" },
+            "normal": { "$ref": "#/$defs/nullableAsset" },
+            "ao": { "$ref": "#/$defs/nullableAsset" }
+          }
+        },
+        "published": { "const": true },
+        "ready_for_configurator": { "const": true },
+        "pbr_ready": { "type": "boolean" },
+        "compatibility": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["geometry_ids", "min_geometry_version"],
+          "properties": {
+            "geometry_ids": {
+              "type": "array",
+              "items": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "min_geometry_version": { "type": "integer", "minimum": 1 }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "schema": "karv.public-material-catalog/1",
+  "channels": ["fabric", "karv_design"],
+  "materials": [
+    {
+      "id": "fabric-kv-001",
+      "channel": "fabric",
+      "name": "Toledo Escama Preto",
+      "collection": "Toledo",
+      "color": { "name": "Escama Preto", "family": "preto" },
+      "material_type": "rústico com fibras naturais e sintéticas",
+      "technologies": [],
+      "functional": {
+        "pet_friendly": false,
+        "water_repellency": false,
+        "easy_clean": false,
+        "indoor_use": true,
+        "outdoor_use": false
+      },
+      "appearance": {
+        "texture": "trama rústica e aparente",
+        "touch": "confortável, com leitura de fibras naturais",
+        "sheen": "baixo",
+        "visual_character": ["rústico", "sofisticado", "texturizado", "marcante"]
+      },
+      "physical_reference_cm": { "width": 120, "height": 60 },
+      "assets": {
+        "preview": "./assets/fabric-kv-001/preview.webp",
+        "base_color": "./assets/fabric-kv-001/base-color.webp",
+        "normal": null,
+        "ao": null
+      },
+      "published": true,
+      "ready_for_configurator": true,
+      "pbr_ready": false,
+      "compatibility": {
+        "geometry_ids": ["karv-chair"],
+        "min_geometry_version": 2
+      }
+    },
+    {
+      "id": "fabric-kv-002",
+      "channel": "fabric",
+      "name": "Croma Musgo Pet Friendly",
+      "collection": "All Colours",
+      "color": { "name": "Musgo", "family": "verde" },
+      "material_type": "sarjado peletizado",
+      "technologies": ["Pet Friendly", "Waterproof"],
+      "functional": {
+        "pet_friendly": true,
+        "water_repellency": true,
+        "easy_clean": true,
+        "indoor_use": true,
+        "outdoor_use": true
+      },
+      "appearance": {
+        "texture": "sarja peletizada lisa",
+        "touch": "macio",
+        "sheen": "baixo",
+        "visual_character": ["contemporâneo", "acolhedor", "natural", "funcional"]
+      },
+      "physical_reference_cm": { "width": 120, "height": 60 },
+      "assets": {
+        "preview": "./assets/fabric-kv-002/preview.webp",
+        "base_color": "./assets/fabric-kv-002/base-color.webp",
+        "normal": null,
+        "ao": null
+      },
+      "published": true,
+      "ready_for_configurator": true,
+      "pbr_ready": false,
+      "compatibility": {
+        "geometry_ids": ["karv-chair"],
+        "min_geometry_version": 2
+      }
+    },
+    {
+      "id": "fabric-kv-003",
+      "channel": "fabric",
+      "name": "Veludo Milano Bege",
+      "collection": "Milano",
+      "color": { "name": "Bege", "family": "bege" },
+      "material_type": "veludo liso",
+      "technologies": [],
+      "functional": {
+        "pet_friendly": false,
+        "water_repellency": false,
+        "easy_clean": false,
+        "indoor_use": true,
+        "outdoor_use": false
+      },
+      "appearance": {
+        "texture": "veludo liso",
+        "touch": "macio",
+        "sheen": "suave e característico do veludo",
+        "visual_character": ["elegante", "aconchegante", "sofisticado", "neutro"]
+      },
+      "physical_reference_cm": { "width": 120, "height": 60 },
+      "assets": {
+        "preview": "./assets/fabric-kv-003/preview.webp",
+        "base_color": "./assets/fabric-kv-003/base-color.webp",
+        "normal": null,
+        "ao": null
+      },
+      "published": true,
+      "ready_for_configurator": true,
+      "pbr_ready": false,
+      "compatibility": {
+        "geometry_ids": ["karv-chair"],
+        "min_geometry_version": 2
+      }
+    }
+  ]
+}
