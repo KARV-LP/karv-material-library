@@ -319,6 +319,84 @@
         ],
         "min_geometry_version": 2
       }
+    },
+    {
+      "id": "fabric-kv-007",
+      "channel": "fabric",
+      "name": "Milano Bege 02",
+      "collection": "Milano",
+      "color": {
+        "name": "Bege 02",
+        "family": "bege"
+      },
+      "material_type": "veludo liso",
+      "technologies": [],
+      "functional": {
+        "pet_friendly": null,
+        "water_repellency": null,
+        "easy_clean": null,
+        "indoor_use": true,
+        "outdoor_use": null
+      },
+      "appearance": {
+        "texture": "veludo liso",
+        "touch": "macio",
+        "sheen": "baixo",
+        "visual_character": [
+          "bege",
+          "macio",
+          "elegante",
+          "contemporâneo"
+        ]
+      },
+      "physical_reference_cm": {
+        "width": 120,
+        "height": 60
+      },
+      "assets": {
+        "preview": "./assets/fabric-kv-007/preview.webp",
+        "base_color": "./assets/fabric-kv-007/base-color.webp",
+        "normal": "./assets/fabric-kv-007/normal.png",
+        "ao": "./assets/fabric-kv-007/ao.webp"
+      },
+      "face_set": "./assets/fabric-kv-007/face-set/metadata.json",
+      "asset_integrity": {
+        "base_color": {
+          "sha256": "5c4de14da8fdc92949c68721dd2ad8932a23540927663bc312cf73818a632cc2",
+          "width_px": 1536,
+          "height_px": 2048,
+          "bytes": 320514
+        },
+        "normal": {
+          "sha256": "a600f1dac6f6373ae6d1da2d7fb2e996827123026f281376c02df5ad1f66c17f",
+          "width_px": 1536,
+          "height_px": 2048,
+          "bytes": 4248645
+        },
+        "ao": {
+          "sha256": "e29e74030419b5eec3845175b255d6ab62455b797b2181c3090972931056a0f1",
+          "width_px": 1536,
+          "height_px": 2048,
+          "bytes": 8632
+        }
+      },
+      "pbr": {
+        "status": "production",
+        "roughness_factor": 0.88,
+        "metalness": 0,
+        "normal_convention": "opengl",
+        "normal_strength": 1,
+        "ao_strength": 1
+      },
+      "published": true,
+      "ready_for_configurator": true,
+      "pbr_ready": true,
+      "compatibility": {
+        "geometry_ids": [
+          "karv-chair"
+        ],
+        "min_geometry_version": 2
+      }
     }
   ]
 }
