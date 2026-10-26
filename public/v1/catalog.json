@@ -1,51 +1,24 @@
 {
   "schema": "karv.public-material-catalog/1",
-  "channels": ["fabric", "karv_design"],
+  "channels": [
+    "fabric",
+    "karv_design"
+  ],
   "materials": [
-    {
-      "id": "fabric-kv-001",
-      "channel": "fabric",
-      "name": "Toledo Escama Preto",
-      "collection": "Toledo",
-      "color": { "name": "Escama Preto", "family": "preto" },
-      "material_type": "rústico com fibras naturais e sintéticas",
-      "technologies": [],
-      "functional": {
-        "pet_friendly": false,
-        "water_repellency": false,
-        "easy_clean": false,
-        "indoor_use": true,
-        "outdoor_use": false
-      },
-      "appearance": {
-        "texture": "trama rústica e aparente",
-        "touch": "confortável, com leitura de fibras naturais",
-        "sheen": "baixo",
-        "visual_character": ["rústico", "sofisticado", "texturizado", "marcante"]
-      },
-      "physical_reference_cm": { "width": 120, "height": 60 },
-      "assets": {
-        "preview": "./assets/fabric-kv-001/preview.webp",
-        "base_color": "./assets/fabric-kv-001/base-color.webp",
-        "normal": null,
-        "ao": null
-      },
-      "published": true,
-      "ready_for_configurator": true,
-      "pbr_ready": false,
-      "compatibility": {
-        "geometry_ids": ["karv-chair"],
-        "min_geometry_version": 2
-      }
-    },
     {
       "id": "fabric-kv-002",
       "channel": "fabric",
       "name": "Croma Musgo Pet Friendly",
       "collection": "All Colours",
-      "color": { "name": "Musgo", "family": "verde" },
+      "color": {
+        "name": "Musgo",
+        "family": "verde"
+      },
       "material_type": "sarjado peletizado",
-      "technologies": ["Pet Friendly", "Waterproof"],
+      "technologies": [
+        "Pet Friendly",
+        "Waterproof"
+      ],
       "functional": {
         "pet_friendly": true,
         "water_repellency": true,
@@ -57,9 +30,17 @@
         "texture": "sarja peletizada lisa",
         "touch": "macio",
         "sheen": "baixo",
-        "visual_character": ["contemporâneo", "acolhedor", "natural", "funcional"]
+        "visual_character": [
+          "contemporâneo",
+          "acolhedor",
+          "natural",
+          "funcional"
+        ]
       },
-      "physical_reference_cm": { "width": 120, "height": 60 },
+      "physical_reference_cm": {
+        "width": 120,
+        "height": 60
+      },
       "assets": {
         "preview": "./assets/fabric-kv-002/face-set/thumbnail.webp",
         "base_color": "./assets/fabric-kv-002/base-color.webp",
@@ -99,43 +80,9 @@
       "ready_for_configurator": true,
       "pbr_ready": true,
       "compatibility": {
-        "geometry_ids": ["karv-chair"],
-        "min_geometry_version": 2
-      }
-    },
-    {
-      "id": "fabric-kv-003",
-      "channel": "fabric",
-      "name": "Veludo Milano Bege",
-      "collection": "Milano",
-      "color": { "name": "Bege", "family": "bege" },
-      "material_type": "veludo liso",
-      "technologies": [],
-      "functional": {
-        "pet_friendly": false,
-        "water_repellency": false,
-        "easy_clean": false,
-        "indoor_use": true,
-        "outdoor_use": false
-      },
-      "appearance": {
-        "texture": "veludo liso",
-        "touch": "macio",
-        "sheen": "suave e característico do veludo",
-        "visual_character": ["elegante", "aconchegante", "sofisticado", "neutro"]
-      },
-      "physical_reference_cm": { "width": 120, "height": 60 },
-      "assets": {
-        "preview": "./assets/fabric-kv-003/preview.webp",
-        "base_color": "./assets/fabric-kv-003/base-color.webp",
-        "normal": null,
-        "ao": null
-      },
-      "published": true,
-      "ready_for_configurator": true,
-      "pbr_ready": false,
-      "compatibility": {
-        "geometry_ids": ["karv-chair"],
+        "geometry_ids": [
+          "karv-chair"
+        ],
         "min_geometry_version": 2
       }
     },
@@ -144,7 +91,10 @@
       "channel": "fabric",
       "name": "Trieste Mármore Caqui 01",
       "collection": "Trieste",
-      "color": { "name": "Mármore Caqui 01", "family": "marrom" },
+      "color": {
+        "name": "Mármore Caqui 01",
+        "family": "marrom"
+      },
       "material_type": "tecido marmorizado",
       "technologies": [],
       "functional": {
@@ -158,9 +108,17 @@
         "texture": "marmorizada",
         "touch": null,
         "sheen": "baixo",
-        "visual_character": ["marmorizado", "terroso", "orgânico", "sofisticado"]
+        "visual_character": [
+          "marmorizado",
+          "terroso",
+          "orgânico",
+          "sofisticado"
+        ]
       },
-      "physical_reference_cm": { "width": 120, "height": 60 },
+      "physical_reference_cm": {
+        "width": 120,
+        "height": 60
+      },
       "assets": {
         "preview": "./assets/fabric-kv-004/preview.webp",
         "base_color": "./assets/fabric-kv-004/base-color.webp",
@@ -200,7 +158,87 @@
       "ready_for_configurator": true,
       "pbr_ready": true,
       "compatibility": {
-        "geometry_ids": ["karv-chair"],
+        "geometry_ids": [
+          "karv-chair"
+        ],
+        "min_geometry_version": 2
+      }
+    },
+    {
+      "id": "fabric-kv-005",
+      "channel": "fabric",
+      "name": "Trieste 37 Linho Cinza Médio",
+      "collection": "Trieste",
+      "color": {
+        "name": "Cinza Médio",
+        "family": "cinza"
+      },
+      "material_type": "tecido com aparência de linho",
+      "technologies": [],
+      "functional": {
+        "pet_friendly": null,
+        "water_repellency": null,
+        "easy_clean": null,
+        "indoor_use": true,
+        "outdoor_use": null
+      },
+      "appearance": {
+        "texture": "trama de linho aparente",
+        "touch": null,
+        "sheen": "baixo",
+        "visual_character": [
+          "neutro",
+          "texturizado",
+          "contemporâneo",
+          "cinza"
+        ]
+      },
+      "physical_reference_cm": {
+        "width": 120,
+        "height": 60
+      },
+      "assets": {
+        "preview": "./assets/fabric-kv-005/preview.webp",
+        "base_color": "./assets/fabric-kv-005/base-color.webp",
+        "normal": "./assets/fabric-kv-005/normal.png",
+        "ao": "./assets/fabric-kv-005/ao.webp"
+      },
+      "face_set": "./assets/fabric-kv-005/face-set/metadata.json",
+      "asset_integrity": {
+        "base_color": {
+          "sha256": "8db30ba46b7464db7bb48454eb2519e34bd7787fb968ad59727db43b838db290",
+          "width_px": 1536,
+          "height_px": 2048,
+          "bytes": 716628
+        },
+        "normal": {
+          "sha256": "b338df22a7d7a70d4b60221ddc220ab58168e0a49c93353e4cee5e0c8be7460c",
+          "width_px": 1536,
+          "height_px": 2048,
+          "bytes": 6110954
+        },
+        "ao": {
+          "sha256": "a53b38ace3cf65dd679efb7ab01a0929ddcef27477e988930bc3dc276f35aacd",
+          "width_px": 1536,
+          "height_px": 2048,
+          "bytes": 44594
+        }
+      },
+      "pbr": {
+        "status": "production",
+        "roughness_factor": 0.88,
+        "metalness": 0,
+        "normal_convention": "opengl",
+        "normal_strength": 1,
+        "ao_strength": 1
+      },
+      "published": true,
+      "ready_for_configurator": true,
+      "pbr_ready": true,
+      "compatibility": {
+        "geometry_ids": [
+          "karv-chair"
+        ],
         "min_geometry_version": 2
       }
     }
