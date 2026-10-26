@@ -22,7 +22,7 @@
   "$defs": {
     "nullableAsset": {
       "type": ["string", "null"],
-      "pattern": "^\\./assets/[a-z0-9-]+/[a-z0-9.-]+$"
+      "pattern": "^\\./assets/[a-z0-9-]+/(?:[a-z0-9-]+/)*[a-z0-9.-]+$"
     },
     "stringArray": {
       "type": "array",
@@ -143,11 +143,18 @@
           "additionalProperties": false,
           "required": ["preview", "base_color", "normal", "ao"],
           "properties": {
-            "preview": { "type": "string", "pattern": "^\\./assets/[a-z0-9-]+/preview\\.webp$" },
+            "preview": {
+              "type": "string",
+              "pattern": "^\\./assets/[a-z0-9-]+/(?:[a-z0-9-]+/)*thumbnail?\\.webp$|^\\./assets/[a-z0-9-]+/preview\\.webp$"
+            },
             "base_color": { "type": "string", "pattern": "^\\./assets/[a-z0-9-]+/base-color\\.webp$" },
             "normal": { "$ref": "#/$defs/nullableAsset" },
             "ao": { "$ref": "#/$defs/nullableAsset" }
           }
+        },
+        "face_set": {
+          "type": "string",
+          "pattern": "^\\./assets/[a-z0-9-]+/face-set/metadata\\.json$"
         },
         "asset_integrity": { "$ref": "#/$defs/assetIntegrity" },
         "pbr": { "$ref": "#/$defs/pbr" },

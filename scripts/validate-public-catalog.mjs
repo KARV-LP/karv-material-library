@@ -10,6 +10,17 @@ const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
 const forbiddenKeys = new Set(['supplier', 'reference', 'cost', 'sources', 'research']);
 const forbiddenText = ['wiler'];
 const PBR_TEXTURE_BUDGET_BYTES = 3.5 * 1024 * 1024;
+const OFFICIAL_FACE_KEYS = new Set([
+  'seat',
+  'backrest-front',
+  'backrest-side',
+  'backrest-rear',
+  'side-outer',
+  'side-inner',
+  'side-rear',
+  'side-top',
+  'piping',
+]);
 
 function assertNoPrivateData(value, trail = 'catalog') {
   if (Array.isArray(value)) {
@@ -42,6 +53,75 @@ function assertIntegrity(material, assetKey, assetUrl) {
     throw new Error(`${material.id}: dimensões inválidas para ${assetKey}`);
   }
   return stat.size;
+}
+
+function assertFaceSet(material) {
+  if (!material.face_set) return;
+  if (
+    typeof material.face_set !== 'string' ||
+    material.face_set !== `./assets/${material.id}/face-set/metadata.json`
+  ) {
+    throw new Error(`${material.id}: URI do face set inválida`);
+  }
+  const metadataPath = path.resolve(path.dirname(catalogPath), material.face_set);
+  const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
+  if (
+    metadata.schema !== 'karv.fabric-face-set/1' ||
+    metadata.fabric_id !== material.id ||
+    metadata.face_count !== 9 ||
+    metadata.map_count !== 27 ||
+    !metadata.faces ||
+    Object.keys(metadata.faces).length !== OFFICIAL_FACE_KEYS.size ||
+    Object.keys(metadata.faces).some((key) => !OFFICIAL_FACE_KEYS.has(key))
+  ) {
+    throw new Error(`${material.id}: face set incompleto`);
+  }
+  const faceRoot = path.dirname(metadataPath);
+  const surfaces = new Set();
+  for (const [faceKey, face] of Object.entries(metadata.faces)) {
+    if (!Array.isArray(face.surface_ids) || face.surface_ids.length === 0) {
+      throw new Error(`${material.id}/${faceKey}: vínculo de superfície ausente`);
+    }
+    for (const surfaceId of face.surface_ids) {
+      if (typeof surfaceId !== 'string' || surfaces.has(surfaceId)) {
+        throw new Error(`${material.id}/${faceKey}: superfície duplicada ou inválida`);
+      }
+      surfaces.add(surfaceId);
+    }
+    const expectedTypes = {
+      base_color: 'image/webp',
+      normal: 'image/png',
+      ambient_occlusion: 'image/webp',
+    };
+    const dimensions = new Set();
+    for (const [assetKey, mediaType] of Object.entries(expectedTypes)) {
+      const asset = face[assetKey];
+      if (
+        !asset ||
+        asset.media_type !== mediaType ||
+        typeof asset.uri !== 'string' ||
+        !asset.uri.startsWith(`./${faceKey}/`) ||
+        asset.uri.includes('..')
+      ) {
+        throw new Error(`${material.id}/${faceKey}: ${assetKey} inválido`);
+      }
+      const assetPath = path.resolve(faceRoot, asset.uri);
+      const info = fs.statSync(assetPath);
+      if (info.size !== asset.bytes || sha256(assetPath) !== asset.sha256) {
+        throw new Error(`${material.id}/${faceKey}: integridade divergente em ${assetKey}`);
+      }
+      dimensions.add(`${asset.width_px}x${asset.height_px}`);
+    }
+    if (dimensions.size !== 1) throw new Error(`${material.id}/${faceKey}: mapas desalinhados`);
+  }
+  const piping = metadata.faces.piping;
+  if (
+    piping.source_filename !== 'LATERAL_TOP.webp' ||
+    piping.derivation !== 'byte-copy-from-side-top' ||
+    piping.base_color.sha256 !== metadata.faces['side-top'].base_color.sha256
+  ) {
+    throw new Error(`${material.id}: vivo não está padronizado pela tira superior`);
+  }
 }
 
 assertNoPrivateData(catalog);
@@ -83,6 +163,7 @@ const allowedKeys = new Set([
   'ready_for_configurator',
   'pbr_ready',
   'compatibility',
+  'face_set',
 ]);
 const ids = new Set();
 
@@ -130,6 +211,8 @@ for (const material of catalog.materials) {
   if (!material.assets?.preview || !material.assets?.base_color) {
     throw new Error(`${material.id}: preview/base_color obrigatórios`);
   }
+
+  assertFaceSet(material);
 
   if (material.pbr_ready) {
     if (!material.assets.normal || !material.assets.ao) {

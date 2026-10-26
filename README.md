@@ -12,6 +12,8 @@ O diretório `public/v1/` é a única superfície destinada a consumo por aplica
 
 - `public/v1/catalog.json`: catálogo público sanitizado e versionado.
 - `public/v1/assets/`: aliases públicos dos assets publicados, sem caminhos internos de fornecedor.
+- `public/v1/assets/<material-id>/face-set/`: Base Color, Normal e AO por face; o vivo usa uma
+  cópia binária da tira superior.
 - `schemas/public-catalog.schema.json`: contrato estrutural da projeção pública.
 - `scripts/validate-public-catalog.mjs`: valida publicação, compatibilidade, assets e ausência de campos privados.
 
