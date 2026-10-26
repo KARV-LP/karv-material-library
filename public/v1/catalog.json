@@ -61,11 +61,12 @@
       },
       "physical_reference_cm": { "width": 120, "height": 60 },
       "assets": {
-        "preview": "./assets/fabric-kv-002/preview.webp",
+        "preview": "./assets/fabric-kv-002/face-set/thumbnail.webp",
         "base_color": "./assets/fabric-kv-002/base-color.webp",
         "normal": "./assets/fabric-kv-002/normal.webp",
         "ao": "./assets/fabric-kv-002/ao.webp"
       },
+      "face_set": "./assets/fabric-kv-002/face-set/metadata.json",
       "asset_integrity": {
         "base_color": {
           "sha256": "3d35f033862c3b074fe1d95ac0b49f7a571e6bf92f8ad13227695b451f428ce4",
@@ -133,6 +134,71 @@
       "published": true,
       "ready_for_configurator": true,
       "pbr_ready": false,
+      "compatibility": {
+        "geometry_ids": ["karv-chair"],
+        "min_geometry_version": 2
+      }
+    },
+    {
+      "id": "fabric-kv-004",
+      "channel": "fabric",
+      "name": "Trieste Mármore Caqui 01",
+      "collection": "Trieste",
+      "color": { "name": "Mármore Caqui 01", "family": "marrom" },
+      "material_type": "tecido marmorizado",
+      "technologies": [],
+      "functional": {
+        "pet_friendly": null,
+        "water_repellency": null,
+        "easy_clean": null,
+        "indoor_use": true,
+        "outdoor_use": null
+      },
+      "appearance": {
+        "texture": "marmorizada",
+        "touch": null,
+        "sheen": "baixo",
+        "visual_character": ["marmorizado", "terroso", "orgânico", "sofisticado"]
+      },
+      "physical_reference_cm": { "width": 120, "height": 60 },
+      "assets": {
+        "preview": "./assets/fabric-kv-004/preview.webp",
+        "base_color": "./assets/fabric-kv-004/base-color.webp",
+        "normal": "./assets/fabric-kv-004/normal.png",
+        "ao": "./assets/fabric-kv-004/ao.webp"
+      },
+      "face_set": "./assets/fabric-kv-004/face-set/metadata.json",
+      "asset_integrity": {
+        "base_color": {
+          "sha256": "9cdf268dc4724081479ae66cdeb2f31c7ad5692e28b8d053e06061d80e43d09d",
+          "width_px": 3544,
+          "height_px": 4725,
+          "bytes": 14740942
+        },
+        "normal": {
+          "sha256": "adfe718d2c22aab0426f8e94870e406fcf9cda78f4806602858033ef35e56d1c",
+          "width_px": 3544,
+          "height_px": 4725,
+          "bytes": 21752519
+        },
+        "ao": {
+          "sha256": "48c73f307116ed2b89f847cbb94098acbdbae59cc1aa469939d2309e70df6280",
+          "width_px": 3544,
+          "height_px": 4725,
+          "bytes": 36482
+        }
+      },
+      "pbr": {
+        "status": "production",
+        "roughness_factor": 0.88,
+        "metalness": 0,
+        "normal_convention": "opengl",
+        "normal_strength": 1,
+        "ao_strength": 1
+      },
+      "published": true,
+      "ready_for_configurator": true,
+      "pbr_ready": true,
       "compatibility": {
         "geometry_ids": ["karv-chair"],
         "min_geometry_version": 2

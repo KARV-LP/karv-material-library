@@ -10,6 +10,18 @@ const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
 const forbiddenKeys = new Set(['supplier', 'reference', 'cost', 'sources', 'research']);
 const forbiddenText = ['wiler'];
 const PBR_TEXTURE_BUDGET_BYTES = 3.5 * 1024 * 1024;
+const FACE_ASSET_BUDGET_BYTES = 25 * 1024 * 1024;
+const OFFICIAL_FACE_KEYS = new Set([
+  'seat',
+  'backrest-front',
+  'backrest-side',
+  'backrest-rear',
+  'side-outer',
+  'side-inner',
+  'side-rear',
+  'side-top',
+  'piping',
+]);
 
 function assertNoPrivateData(value, trail = 'catalog') {
   if (Array.isArray(value)) {
@@ -42,6 +54,80 @@ function assertIntegrity(material, assetKey, assetUrl) {
     throw new Error(`${material.id}: dimensões inválidas para ${assetKey}`);
   }
   return stat.size;
+}
+
+function assertFaceSet(material) {
+  if (!material.face_set) return;
+  if (
+    typeof material.face_set !== 'string' ||
+    material.face_set !== `./assets/${material.id}/face-set/metadata.json`
+  ) {
+    throw new Error(`${material.id}: URI do face set inválida`);
+  }
+  const metadataPath = path.resolve(path.dirname(catalogPath), material.face_set);
+  const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
+  if (
+    metadata.schema !== 'karv.fabric-face-set/1' ||
+    metadata.fabric_id !== material.id ||
+    metadata.face_count !== 9 ||
+    metadata.map_count !== 27 ||
+    !metadata.faces ||
+    Object.keys(metadata.faces).length !== OFFICIAL_FACE_KEYS.size ||
+    Object.keys(metadata.faces).some((key) => !OFFICIAL_FACE_KEYS.has(key))
+  ) {
+    throw new Error(`${material.id}: face set incompleto`);
+  }
+  const faceRoot = path.dirname(metadataPath);
+  const surfaces = new Set();
+  for (const [faceKey, face] of Object.entries(metadata.faces)) {
+    if (!Array.isArray(face.surface_ids) || face.surface_ids.length === 0) {
+      throw new Error(`${material.id}/${faceKey}: vínculo de superfície ausente`);
+    }
+    for (const surfaceId of face.surface_ids) {
+      if (typeof surfaceId !== 'string' || surfaces.has(surfaceId)) {
+        throw new Error(`${material.id}/${faceKey}: superfície duplicada ou inválida`);
+      }
+      surfaces.add(surfaceId);
+    }
+    const expectedTypes = {
+      base_color: 'image/webp',
+      normal: 'image/png',
+      ambient_occlusion: 'image/webp',
+    };
+    const dimensions = new Set();
+    for (const [assetKey, mediaType] of Object.entries(expectedTypes)) {
+      const asset = face[assetKey];
+      if (
+        !asset ||
+        asset.media_type !== mediaType ||
+        typeof asset.uri !== 'string' ||
+        !asset.uri.startsWith(`./${faceKey}/`) ||
+        asset.uri.includes('..')
+      ) {
+        throw new Error(`${material.id}/${faceKey}: ${assetKey} inválido`);
+      }
+      const assetPath = path.resolve(faceRoot, asset.uri);
+      const info = fs.statSync(assetPath);
+      if (info.size !== asset.bytes || sha256(assetPath) !== asset.sha256) {
+        throw new Error(`${material.id}/${faceKey}: integridade divergente em ${assetKey}`);
+      }
+      if (info.size > FACE_ASSET_BUDGET_BYTES) {
+        throw new Error(
+          `${material.id}/${faceKey}: ${assetKey} excede budget (${info.size} > ${FACE_ASSET_BUDGET_BYTES})`,
+        );
+      }
+      dimensions.add(`${asset.width_px}x${asset.height_px}`);
+    }
+    if (dimensions.size !== 1) throw new Error(`${material.id}/${faceKey}: mapas desalinhados`);
+  }
+  const piping = metadata.faces.piping;
+  if (
+    piping.source_filename !== 'LATERAL_TOP.webp' ||
+    piping.derivation !== 'byte-copy-from-side-top' ||
+    piping.base_color.sha256 !== metadata.faces['side-top'].base_color.sha256
+  ) {
+    throw new Error(`${material.id}: vivo não está padronizado pela tira superior`);
+  }
 }
 
 assertNoPrivateData(catalog);
@@ -83,6 +169,7 @@ const allowedKeys = new Set([
   'ready_for_configurator',
   'pbr_ready',
   'compatibility',
+  'face_set',
 ]);
 const ids = new Set();
 
@@ -131,6 +218,8 @@ for (const material of catalog.materials) {
     throw new Error(`${material.id}: preview/base_color obrigatórios`);
   }
 
+  assertFaceSet(material);
+
   if (material.pbr_ready) {
     if (!material.assets.normal || !material.assets.ao) {
       throw new Error(`${material.id}: pbr_ready exige normal e ao`);
@@ -157,7 +246,7 @@ for (const material of catalog.materials) {
       assertIntegrity(material, 'base_color', material.assets.base_color) +
       assertIntegrity(material, 'normal', material.assets.normal) +
       assertIntegrity(material, 'ao', material.assets.ao);
-    if (pbrBytes > PBR_TEXTURE_BUDGET_BYTES) {
+    if (!material.face_set && pbrBytes > PBR_TEXTURE_BUDGET_BYTES) {
       throw new Error(
         `${material.id}: PBR web excede budget (${pbrBytes} > ${PBR_TEXTURE_BUDGET_BYTES})`,
       );
@@ -165,6 +254,17 @@ for (const material of catalog.materials) {
   }
 }
 
+const publicAssetsRoot = path.join(path.dirname(catalogPath), 'assets');
+for (const entry of fs.readdirSync(publicAssetsRoot, { withFileTypes: true })) {
+  if (
+    entry.isDirectory() &&
+    /^(?:fabric|design)-kv-[0-9]{3,}$/.test(entry.name) &&
+    !ids.has(entry.name)
+  ) {
+    throw new Error(`${entry.name}: diretório público sem entrada em public/v1/catalog.json`);
+  }
+}
+
 console.log(
-  `Public catalog: PASS (${catalog.materials.length} materiais, sem metadata privada; PBR <= ${PBR_TEXTURE_BUDGET_BYTES} B/material)`,
+  `Public catalog: PASS (${catalog.materials.length} materiais, sem metadata privada; PBR legado <= ${PBR_TEXTURE_BUDGET_BYTES} B/material; mapas por face <= ${FACE_ASSET_BUDGET_BYTES} B/arquivo)`,
 );
