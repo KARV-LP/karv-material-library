@@ -1,0 +1,48 @@
+name: Refresh selected KARV fabrics
+
+on:
+  push:
+    branches:
+      - feat/refresh-new-fabrics
+    paths:
+      - .github/workflows/refresh-selected-fabrics.yml
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/refresh-new-fabrics
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install image processor
+        run: npm install --no-save --package-lock=false sharp
+
+      - name: Build selected fabrics
+        run: node scripts/refresh-selected-fabrics.mjs
+
+      - name: Validate public catalog
+        run: node scripts/validate-public-catalog.mjs
+
+      - name: Remove one-time refresh files
+        run: |
+          rm -f scripts/refresh-selected-fabrics.mjs
+          rm -f .github/workflows/refresh-selected-fabrics.yml
+
+      - name: Commit generated library
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "feat: manter apenas novos tecidos KARV e adicionar fabric-kv-005"
+          git push origin HEAD:feat/refresh-new-fabrics
