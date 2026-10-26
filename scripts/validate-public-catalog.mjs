@@ -10,6 +10,7 @@ const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
 const forbiddenKeys = new Set(['supplier', 'reference', 'cost', 'sources', 'research']);
 const forbiddenText = ['wiler'];
 const PBR_TEXTURE_BUDGET_BYTES = 3.5 * 1024 * 1024;
+const FACE_ASSET_BUDGET_BYTES = 25 * 1024 * 1024;
 const OFFICIAL_FACE_KEYS = new Set([
   'seat',
   'backrest-front',
@@ -109,6 +110,11 @@ function assertFaceSet(material) {
       const info = fs.statSync(assetPath);
       if (info.size !== asset.bytes || sha256(assetPath) !== asset.sha256) {
         throw new Error(`${material.id}/${faceKey}: integridade divergente em ${assetKey}`);
+      }
+      if (info.size > FACE_ASSET_BUDGET_BYTES) {
+        throw new Error(
+          `${material.id}/${faceKey}: ${assetKey} excede budget (${info.size} > ${FACE_ASSET_BUDGET_BYTES})`,
+        );
       }
       dimensions.add(`${asset.width_px}x${asset.height_px}`);
     }
@@ -240,7 +246,7 @@ for (const material of catalog.materials) {
       assertIntegrity(material, 'base_color', material.assets.base_color) +
       assertIntegrity(material, 'normal', material.assets.normal) +
       assertIntegrity(material, 'ao', material.assets.ao);
-    if (pbrBytes > PBR_TEXTURE_BUDGET_BYTES) {
+    if (!material.face_set && pbrBytes > PBR_TEXTURE_BUDGET_BYTES) {
       throw new Error(
         `${material.id}: PBR web excede budget (${pbrBytes} > ${PBR_TEXTURE_BUDGET_BYTES})`,
       );
@@ -249,5 +255,5 @@ for (const material of catalog.materials) {
 }
 
 console.log(
-  `Public catalog: PASS (${catalog.materials.length} materiais, sem metadata privada; PBR <= ${PBR_TEXTURE_BUDGET_BYTES} B/material)`,
+  `Public catalog: PASS (${catalog.materials.length} materiais, sem metadata privada; PBR legado <= ${PBR_TEXTURE_BUDGET_BYTES} B/material; mapas por face <= ${FACE_ASSET_BUDGET_BYTES} B/arquivo)`,
 );

@@ -1,0 +1,106 @@
+{
+  "schema": "karv.lossless-base-color-conversion/1",
+  "fabric_id": "fabric-kv-004",
+  "source_format": "image/png",
+  "output_format": "image/webp",
+  "mode": "lossless",
+  "user_authorized": true,
+  "files": {
+    "Assento.webp": {
+      "source_filename": "ASSENTO.png",
+      "source_media_type": "image/png",
+      "source_sha256": "4647693dfee1446cf76b1f4e31b1249e61f9fbc94be8b0c7649c6349ef2253d7",
+      "output_media_type": "image/webp",
+      "output_sha256": "9cdf268dc4724081479ae66cdeb2f31c7ad5692e28b8d053e06061d80e43d09d",
+      "width_px": 3544,
+      "height_px": 4725,
+      "alpha_preserved": true,
+      "visible_pixels_verified_equal": true,
+      "transparent_rgb_may_be_canonicalized": true
+    },
+    "ENCOSTO_FRONTAL.webp": {
+      "source_filename": "ENCOSTO FRONTAL.png",
+      "source_media_type": "image/png",
+      "source_sha256": "afae29568f9d1aa2b7e5926367ec9e05d1b86618393b8df7c34ac41824d55c69",
+      "output_media_type": "image/webp",
+      "output_sha256": "dcc65d4eeb1ab70b9e93440dd084cca13703e2f10657010f57ad363ab72dbf2d",
+      "width_px": 3544,
+      "height_px": 2364,
+      "alpha_preserved": true,
+      "visible_pixels_verified_equal": true,
+      "transparent_rgb_may_be_canonicalized": true
+    },
+    "ENCOSTO_LATERAL.webp": {
+      "source_filename": "ENCOSTO LATERAL.png",
+      "source_media_type": "image/png",
+      "source_sha256": "fa1d6df5b8a47098e1c0f5239bbf7d4197a2cc644c5c8a9af077e77b8cbdda2f",
+      "output_media_type": "image/webp",
+      "output_sha256": "8c10576414c2f4a4c489fe6f24eb2f5e88a2745caa3ded4a0ecd2690eb47f2db",
+      "width_px": 1234,
+      "height_px": 1254,
+      "alpha_preserved": true,
+      "visible_pixels_verified_equal": true,
+      "transparent_rgb_may_be_canonicalized": true
+    },
+    "ENCOSTO_TRASEIRO.webp": {
+      "source_filename": "ENCOSTO TRASEIRO.png",
+      "source_media_type": "image/png",
+      "source_sha256": "4647693dfee1446cf76b1f4e31b1249e61f9fbc94be8b0c7649c6349ef2253d7",
+      "output_media_type": "image/webp",
+      "output_sha256": "9cdf268dc4724081479ae66cdeb2f31c7ad5692e28b8d053e06061d80e43d09d",
+      "width_px": 3544,
+      "height_px": 4725,
+      "alpha_preserved": true,
+      "visible_pixels_verified_equal": true,
+      "transparent_rgb_may_be_canonicalized": true
+    },
+    "LATERAL_EXTERNA.webp": {
+      "source_filename": "LATERAL EXTERNA.png",
+      "source_media_type": "image/png",
+      "source_sha256": "56c989bb6b39a5d8e7c419484032931e994c1333a8626095bf88e501a8ec480c",
+      "output_media_type": "image/webp",
+      "output_sha256": "bb7d4fec045ffdb840103baee0e3e462b195813db81062410b29da8b43685c09",
+      "width_px": 4395,
+      "height_px": 2770,
+      "alpha_preserved": true,
+      "visible_pixels_verified_equal": true,
+      "transparent_rgb_may_be_canonicalized": true
+    },
+    "LATERAL_INTERNA.webp": {
+      "source_filename": "LATERAL INTERNA.png",
+      "source_media_type": "image/png",
+      "source_sha256": "2c2b0ee3b46f0c73bf7120119f4abf70c262db0e3b3179ca2aabdbd502b91b02",
+      "output_media_type": "image/webp",
+      "output_sha256": "d5db14b8a1666439f26c0da391aa75f26c728b25ac0e70af44dd91cee06e3dd1",
+      "width_px": 2950,
+      "height_px": 1047,
+      "alpha_preserved": true,
+      "visible_pixels_verified_equal": true,
+      "transparent_rgb_may_be_canonicalized": true
+    },
+    "LATERAL_REAR.webp": {
+      "source_filename": "LATERAL REAR.png",
+      "source_media_type": "image/png",
+      "source_sha256": "47d89e047b6b729413514ec0f92a565571e8e1a67986db1c3f5fa19ec06ed1c0",
+      "output_media_type": "image/webp",
+      "output_sha256": "db7bd76c90dd6b28e4ca3578a0cf5df1366110316b30be7d2a2265e9d96b38eb",
+      "width_px": 592,
+      "height_px": 2599,
+      "alpha_preserved": true,
+      "visible_pixels_verified_equal": true,
+      "transparent_rgb_may_be_canonicalized": true
+    },
+    "LATERAL_TOP.webp": {
+      "source_filename": "LATERAL TOP.png",
+      "source_media_type": "image/png",
+      "source_sha256": "bc3faf7aa30d0973337b1b9b2096ccf4cc9ed93872fc9c5c55ca8eb636e9ab8d",
+      "output_media_type": "image/webp",
+      "output_sha256": "dc48fef0c7443027171b37b527945f3f27a1a3d0ac0750434a689ba4a8aba682",
+      "width_px": 592,
+      "height_px": 5906,
+      "alpha_preserved": true,
+      "visible_pixels_verified_equal": true,
+      "transparent_rgb_may_be_canonicalized": true
+    }
+  }
+}

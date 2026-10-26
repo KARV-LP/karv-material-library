@@ -1,0 +1,295 @@
+{
+  "schema": "karv.fabric-face-set/1",
+  "fabric_id": "fabric-kv-004",
+  "source_conversion_manifest": "./conversion-manifest.json",
+  "face_count": 9,
+  "map_count": 27,
+  "thumbnail": {
+    "source_face": "seat",
+    "uri": "./thumbnail.webp",
+    "media_type": "image/webp",
+    "sha256": "6334ccb2e69d5d74e31401370719a3e6b43d02535e4624cb9ca6d289d4345ec8",
+    "width_px": 512,
+    "height_px": 512,
+    "bytes": 14430
+  },
+  "generation": {
+    "normal_convention": "opengl",
+    "normal_strength": 2.25,
+    "ao_strength": 0.65
+  },
+  "faces": {
+    "seat": {
+      "source_filename": "Assento.webp",
+      "surface_ids": [
+        "seat"
+      ],
+      "base_color": {
+        "uri": "./seat/base-color.webp",
+        "media_type": "image/webp",
+        "sha256": "9cdf268dc4724081479ae66cdeb2f31c7ad5692e28b8d053e06061d80e43d09d",
+        "width_px": 3544,
+        "height_px": 4725,
+        "bytes": 14740942
+      },
+      "normal": {
+        "uri": "./seat/normal.png",
+        "media_type": "image/png",
+        "sha256": "adfe718d2c22aab0426f8e94870e406fcf9cda78f4806602858033ef35e56d1c",
+        "width_px": 3544,
+        "height_px": 4725,
+        "bytes": 21752519
+      },
+      "ambient_occlusion": {
+        "uri": "./seat/ao.webp",
+        "media_type": "image/webp",
+        "sha256": "48c73f307116ed2b89f847cbb94098acbdbae59cc1aa469939d2309e70df6280",
+        "width_px": 3544,
+        "height_px": 4725,
+        "bytes": 36482
+      }
+    },
+    "backrest-front": {
+      "source_filename": "ENCOSTO_FRONTAL.webp",
+      "surface_ids": [
+        "backrest-front"
+      ],
+      "base_color": {
+        "uri": "./backrest-front/base-color.webp",
+        "media_type": "image/webp",
+        "sha256": "dcc65d4eeb1ab70b9e93440dd084cca13703e2f10657010f57ad363ab72dbf2d",
+        "width_px": 3544,
+        "height_px": 2364,
+        "bytes": 7546496
+      },
+      "normal": {
+        "uri": "./backrest-front/normal.png",
+        "media_type": "image/png",
+        "sha256": "6763f56bb6ea4877e4b336a0e3777f66489fc71575a6c766d67309a24300bbb9",
+        "width_px": 3544,
+        "height_px": 2364,
+        "bytes": 10864252
+      },
+      "ambient_occlusion": {
+        "uri": "./backrest-front/ao.webp",
+        "media_type": "image/webp",
+        "sha256": "76b5ba607d2c6d0f5b8f6a33b5b6069466e21a738d574cb97b9e22d24ddea4d4",
+        "width_px": 3544,
+        "height_px": 2364,
+        "bytes": 19108
+      }
+    },
+    "backrest-side": {
+      "source_filename": "ENCOSTO_LATERAL.webp",
+      "surface_ids": [
+        "backrest-side"
+      ],
+      "base_color": {
+        "uri": "./backrest-side/base-color.webp",
+        "media_type": "image/webp",
+        "sha256": "8c10576414c2f4a4c489fe6f24eb2f5e88a2745caa3ded4a0ecd2690eb47f2db",
+        "width_px": 1234,
+        "height_px": 1254,
+        "bytes": 1101096
+      },
+      "normal": {
+        "uri": "./backrest-side/normal.png",
+        "media_type": "image/png",
+        "sha256": "117148ec7d0b7ba88c3246ef8b1c5d63f4d96f7fe6f2238552c8071100b4df8c",
+        "width_px": 1234,
+        "height_px": 1254,
+        "bytes": 1679816
+      },
+      "ambient_occlusion": {
+        "uri": "./backrest-side/ao.webp",
+        "media_type": "image/webp",
+        "sha256": "d33e02b2a09a58aa824d97d5de5e739eaf0bf9f5b0fa019d6393d4fb08af0ad1",
+        "width_px": 1234,
+        "height_px": 1254,
+        "bytes": 7010
+      }
+    },
+    "backrest-rear": {
+      "source_filename": "ENCOSTO_TRASEIRO.webp",
+      "surface_ids": [
+        "backrest-rear"
+      ],
+      "base_color": {
+        "uri": "./backrest-rear/base-color.webp",
+        "media_type": "image/webp",
+        "sha256": "9cdf268dc4724081479ae66cdeb2f31c7ad5692e28b8d053e06061d80e43d09d",
+        "width_px": 3544,
+        "height_px": 4725,
+        "bytes": 14740942
+      },
+      "normal": {
+        "uri": "./backrest-rear/normal.png",
+        "media_type": "image/png",
+        "sha256": "adfe718d2c22aab0426f8e94870e406fcf9cda78f4806602858033ef35e56d1c",
+        "width_px": 3544,
+        "height_px": 4725,
+        "bytes": 21752519
+      },
+      "ambient_occlusion": {
+        "uri": "./backrest-rear/ao.webp",
+        "media_type": "image/webp",
+        "sha256": "48c73f307116ed2b89f847cbb94098acbdbae59cc1aa469939d2309e70df6280",
+        "width_px": 3544,
+        "height_px": 4725,
+        "bytes": 36482
+      }
+    },
+    "side-outer": {
+      "source_filename": "LATERAL_EXTERNA.webp",
+      "surface_ids": [
+        "side-outer"
+      ],
+      "base_color": {
+        "uri": "./side-outer/base-color.webp",
+        "media_type": "image/webp",
+        "sha256": "bb7d4fec045ffdb840103baee0e3e462b195813db81062410b29da8b43685c09",
+        "width_px": 4395,
+        "height_px": 2770,
+        "bytes": 10415378
+      },
+      "normal": {
+        "uri": "./side-outer/normal.png",
+        "media_type": "image/png",
+        "sha256": "3f45dfcd31a5179c95c7723cd4d8c4b2d17fa59f24ad386ceb737a5660866b71",
+        "width_px": 4395,
+        "height_px": 2770,
+        "bytes": 15173655
+      },
+      "ambient_occlusion": {
+        "uri": "./side-outer/ao.webp",
+        "media_type": "image/webp",
+        "sha256": "c8be00f7d9adc249153aef59ab56f5231ef503a6c0c34fa3e254a41d3578c5cf",
+        "width_px": 4395,
+        "height_px": 2770,
+        "bytes": 37274
+      }
+    },
+    "side-inner": {
+      "source_filename": "LATERAL_INTERNA.webp",
+      "surface_ids": [
+        "side-inner"
+      ],
+      "base_color": {
+        "uri": "./side-inner/base-color.webp",
+        "media_type": "image/webp",
+        "sha256": "d5db14b8a1666439f26c0da391aa75f26c728b25ac0e70af44dd91cee06e3dd1",
+        "width_px": 2950,
+        "height_px": 1047,
+        "bytes": 2099884
+      },
+      "normal": {
+        "uri": "./side-inner/normal.png",
+        "media_type": "image/png",
+        "sha256": "f38b414a47f5a0dfc73f3abb315bc26c6dcc3a45eaee3eaf16317469f4c2192f",
+        "width_px": 2950,
+        "height_px": 1047,
+        "bytes": 3225897
+      },
+      "ambient_occlusion": {
+        "uri": "./side-inner/ao.webp",
+        "media_type": "image/webp",
+        "sha256": "04b2eeb2ff10a0d460b4f38252efda802cac73f09a4cdf1b3afd19ba33937d67",
+        "width_px": 2950,
+        "height_px": 1047,
+        "bytes": 13806
+      }
+    },
+    "side-rear": {
+      "source_filename": "LATERAL_REAR.webp",
+      "surface_ids": [
+        "side-rear"
+      ],
+      "base_color": {
+        "uri": "./side-rear/base-color.webp",
+        "media_type": "image/webp",
+        "sha256": "db7bd76c90dd6b28e4ca3578a0cf5df1366110316b30be7d2a2265e9d96b38eb",
+        "width_px": 592,
+        "height_px": 2599,
+        "bytes": 1445022
+      },
+      "normal": {
+        "uri": "./side-rear/normal.png",
+        "media_type": "image/png",
+        "sha256": "30548754396008aee1ba10b3654a62822b064f90f8341ec8cedcb56642a4ac61",
+        "width_px": 592,
+        "height_px": 2599,
+        "bytes": 2232069
+      },
+      "ambient_occlusion": {
+        "uri": "./side-rear/ao.webp",
+        "media_type": "image/webp",
+        "sha256": "bac42c5248f5ebae585c3f331e1fbcb8faa5b1c6d1ca0e12f79152e89a4f0d65",
+        "width_px": 592,
+        "height_px": 2599,
+        "bytes": 3808
+      }
+    },
+    "side-top": {
+      "source_filename": "LATERAL_TOP.webp",
+      "surface_ids": [
+        "side-top"
+      ],
+      "base_color": {
+        "uri": "./side-top/base-color.webp",
+        "media_type": "image/webp",
+        "sha256": "dc48fef0c7443027171b37b527945f3f27a1a3d0ac0750434a689ba4a8aba682",
+        "width_px": 592,
+        "height_px": 5906,
+        "bytes": 3116336
+      },
+      "normal": {
+        "uri": "./side-top/normal.png",
+        "media_type": "image/png",
+        "sha256": "e551c2657266157a755de9648c774bf28798d7fc3d8115ae7766f3361966d10c",
+        "width_px": 592,
+        "height_px": 5906,
+        "bytes": 4592431
+      },
+      "ambient_occlusion": {
+        "uri": "./side-top/ao.webp",
+        "media_type": "image/webp",
+        "sha256": "8b828edfe0754853626a9e3e3cf52076b0143f0cd528fd922512ea6515eafe8c",
+        "width_px": 592,
+        "height_px": 5906,
+        "bytes": 8168
+      }
+    },
+    "piping": {
+      "source_filename": "LATERAL_TOP.webp",
+      "derivation": "byte-copy-from-side-top",
+      "surface_ids": [
+        "piping-seat",
+        "piping-backrest"
+      ],
+      "base_color": {
+        "uri": "./piping/base-color.webp",
+        "media_type": "image/webp",
+        "sha256": "dc48fef0c7443027171b37b527945f3f27a1a3d0ac0750434a689ba4a8aba682",
+        "width_px": 592,
+        "height_px": 5906,
+        "bytes": 3116336
+      },
+      "normal": {
+        "uri": "./piping/normal.png",
+        "media_type": "image/png",
+        "sha256": "e551c2657266157a755de9648c774bf28798d7fc3d8115ae7766f3361966d10c",
+        "width_px": 592,
+        "height_px": 5906,
+        "bytes": 4592431
+      },
+      "ambient_occlusion": {
+        "uri": "./piping/ao.webp",
+        "media_type": "image/webp",
+        "sha256": "8b828edfe0754853626a9e3e3cf52076b0143f0cd528fd922512ea6515eafe8c",
+        "width_px": 592,
+        "height_px": 5906,
+        "bytes": 8168
+      }
+    }
+  }
+}
