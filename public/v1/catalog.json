@@ -241,6 +241,84 @@
         ],
         "min_geometry_version": 2
       }
+    },
+    {
+      "id": "fabric-kv-006",
+      "channel": "fabric",
+      "name": "Trieste 38 Abst Geo Preto Cinza",
+      "collection": "Trieste",
+      "color": {
+        "name": "Preto Cinza",
+        "family": "cinza"
+      },
+      "material_type": "tecido geométrico abstrato",
+      "technologies": [],
+      "functional": {
+        "pet_friendly": null,
+        "water_repellency": null,
+        "easy_clean": null,
+        "indoor_use": true,
+        "outdoor_use": null
+      },
+      "appearance": {
+        "texture": "geometria abstrata em preto e cinza",
+        "touch": null,
+        "sheen": "baixo",
+        "visual_character": [
+          "geométrico",
+          "abstrato",
+          "gráfico",
+          "contemporâneo"
+        ]
+      },
+      "physical_reference_cm": {
+        "width": 120,
+        "height": 60
+      },
+      "assets": {
+        "preview": "./assets/fabric-kv-006/preview.webp",
+        "base_color": "./assets/fabric-kv-006/base-color.webp",
+        "normal": "./assets/fabric-kv-006/normal.png",
+        "ao": "./assets/fabric-kv-006/ao.webp"
+      },
+      "face_set": "./assets/fabric-kv-006/face-set/metadata.json",
+      "asset_integrity": {
+        "base_color": {
+          "sha256": "caaf8a87ed9c2d6f6a9d3c5ea4a39ce3b7677e96eb1ca45795f5e81bab08ff4b",
+          "width_px": 1536,
+          "height_px": 2048,
+          "bytes": 611898
+        },
+        "normal": {
+          "sha256": "c52e03b60cf01d516f82ec0fabea78651ea3e70e1e1cfc767106f60691b4ccc0",
+          "width_px": 1536,
+          "height_px": 2048,
+          "bytes": 6296703
+        },
+        "ao": {
+          "sha256": "bd422c47d6ee31eafac31225d11501ad2102e96c183609ac71340f97168d56fe",
+          "width_px": 1536,
+          "height_px": 2048,
+          "bytes": 46816
+        }
+      },
+      "pbr": {
+        "status": "production",
+        "roughness_factor": 0.88,
+        "metalness": 0,
+        "normal_convention": "opengl",
+        "normal_strength": 1,
+        "ao_strength": 1
+      },
+      "published": true,
+      "ready_for_configurator": true,
+      "pbr_ready": true,
+      "compatibility": {
+        "geometry_ids": [
+          "karv-chair"
+        ],
+        "min_geometry_version": 2
+      }
     }
   ]
 }
