@@ -397,6 +397,84 @@
         ],
         "min_geometry_version": 2
       }
+    },
+    {
+      "id": "fabric-kv-008",
+      "channel": "fabric",
+      "name": "Kansas 21 Café",
+      "collection": "Kansas",
+      "color": {
+        "name": "Café",
+        "family": "marrom"
+      },
+      "material_type": "tecido texturizado",
+      "technologies": [],
+      "functional": {
+        "pet_friendly": null,
+        "water_repellency": null,
+        "easy_clean": null,
+        "indoor_use": true,
+        "outdoor_use": null
+      },
+      "appearance": {
+        "texture": "trama texturizada",
+        "touch": null,
+        "sheen": "baixo",
+        "visual_character": [
+          "café",
+          "terroso",
+          "acolhedor",
+          "contemporâneo"
+        ]
+      },
+      "physical_reference_cm": {
+        "width": 120,
+        "height": 60
+      },
+      "assets": {
+        "preview": "./assets/fabric-kv-008/preview.webp",
+        "base_color": "./assets/fabric-kv-008/base-color.webp",
+        "normal": "./assets/fabric-kv-008/normal.png",
+        "ao": "./assets/fabric-kv-008/ao.webp"
+      },
+      "face_set": "./assets/fabric-kv-008/face-set/metadata.json",
+      "asset_integrity": {
+        "base_color": {
+          "sha256": "f97bea007066283b29ae02fe0a7f786c05963dfcbc5518bb3430aee6df94c612",
+          "width_px": 1536,
+          "height_px": 2048,
+          "bytes": 215486
+        },
+        "normal": {
+          "sha256": "3f9a34c54a0ccb1c7511f23c75615dc0298e09a4072ad9975b383223b9310f92",
+          "width_px": 1536,
+          "height_px": 2048,
+          "bytes": 3012575
+        },
+        "ao": {
+          "sha256": "aabd55d734d97df52ed087d16897642726d585ea859df72f5b6f8a4c6a444381",
+          "width_px": 1536,
+          "height_px": 2048,
+          "bytes": 7862
+        }
+      },
+      "pbr": {
+        "status": "production",
+        "roughness_factor": 0.88,
+        "metalness": 0,
+        "normal_convention": "opengl",
+        "normal_strength": 1,
+        "ao_strength": 1
+      },
+      "published": true,
+      "ready_for_configurator": true,
+      "pbr_ready": true,
+      "compatibility": {
+        "geometry_ids": [
+          "karv-chair"
+        ],
+        "min_geometry_version": 2
+      }
     }
   ]
 }
