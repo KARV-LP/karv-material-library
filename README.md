@@ -2,6 +2,17 @@
 
 Biblioteca oficial e versionada de tecidos e Estampas KARV.
 
+## Regra obrigatória
+
+Todo material novo e toda atualização de material existente devem ser implementados neste
+repositório. O Configurador 3D apenas consome a Biblioteca e não deve armazenar cópias próprias dos
+tecidos.
+
+Uma alteração de material só está completa quando os arquivos finais estão em
+`public/v1/assets/<material-id>/`, os mapas por face estão em
+`public/v1/assets/<material-id>/face-set/` e `public/v1/catalog.json` foi atualizado no mesmo PR.
+Consulte [AGENTS.md](AGENTS.md) para as regras técnicas obrigatórias.
+
 - Google Drive: entrada e organização dos assets.
 - GitHub: metadados e arquivos finais para uso pelo sistema.
 - Masters: armazenamento local sob responsabilidade do usuário.

@@ -254,6 +254,17 @@ for (const material of catalog.materials) {
   }
 }
 
+const publicAssetsRoot = path.join(path.dirname(catalogPath), 'assets');
+for (const entry of fs.readdirSync(publicAssetsRoot, { withFileTypes: true })) {
+  if (
+    entry.isDirectory() &&
+    /^(?:fabric|design)-kv-[0-9]{3,}$/.test(entry.name) &&
+    !ids.has(entry.name)
+  ) {
+    throw new Error(`${entry.name}: diretório público sem entrada em public/v1/catalog.json`);
+  }
+}
+
 console.log(
   `Public catalog: PASS (${catalog.materials.length} materiais, sem metadata privada; PBR legado <= ${PBR_TEXTURE_BUDGET_BYTES} B/material; mapas por face <= ${FACE_ASSET_BUDGET_BYTES} B/arquivo)`,
 );
