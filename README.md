@@ -15,7 +15,7 @@ Consulte [AGENTS.md](AGENTS.md) para as regras técnicas obrigatórias.
 
 - Google Drive: entrada e organização dos assets.
 - GitHub: metadados e arquivos finais para uso pelo sistema.
-- Masters: armazenamento local sob responsabilidade do usuário.
+- Masters: armazenamento local sob responsabilidade do usuário.\n- GLB Scale Master: referência técnica obrigatória para calibrar escala/orientação dos Revestimentos; consulte [`docs/SCALE-MASTER.md`](docs/SCALE-MASTER.md).
 
 ## Contrato público para aplicações
 
