@@ -23,5 +23,11 @@ jobs:
         with:
           node-version: 22
 
+      - name: Check Scale Master audit syntax
+        run: node --check scripts/scale-master-audit.mjs
+
+      - name: Check Scale Master Blender script syntax
+        run: python -m py_compile scripts/blender-scale-master-bake.py
+
       - name: Validate public catalog
         run: node scripts/validate-public-catalog.mjs
