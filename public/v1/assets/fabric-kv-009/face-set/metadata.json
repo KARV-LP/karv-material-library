@@ -20,20 +20,7 @@
     },
     "normal_convention": "opengl",
     "normal_strength": 2.25,
-    "ao_strength": 0.65,
-    "side_inner_correction": {
-      "reference_glb_sha256": "be51f1f363aa7d230d74b55230be0fdc40d6398953eab28f00a3bc5caa700353",
-      "source_image": "LATERAL INTERNA",
-      "source_uv_set": 2,
-      "method": "clean-weave-mirror-fill",
-      "crop_px": [
-        220,
-        30,
-        1120,
-        320
-      ],
-      "scope": "side-inner"
-    }
+    "ao_strength": 0.65
   },
   "faces": {
     "seat": {
@@ -194,26 +181,26 @@
       "base_color": {
         "uri": "./side-inner/base-color.webp",
         "media_type": "image/webp",
-        "sha256": "dbbe9344af412bb2f461443bbf8523f3e56568305377308b0faab8846f4fb9e7",
+        "sha256": "ffd35ffd8b45a5bb441d4f6a7f1ab34fef872ad3def2e07f8c695823ac16f7eb",
         "width_px": 1416,
         "height_px": 503,
-        "bytes": 323840
+        "bytes": 393682
       },
       "normal": {
         "uri": "./side-inner/normal.png",
         "media_type": "image/png",
-        "sha256": "e1704fa2de117444882f81f9924c741f4c77f9a1d90c2817ea137aae3d3a7f7f",
+        "sha256": "142282a64e90627bd8021859811d4e33a28d1cb9862efadb826af5d088386f88",
         "width_px": 1416,
         "height_px": 503,
-        "bytes": 1884286
+        "bytes": 1769849
       },
       "ambient_occlusion": {
         "uri": "./side-inner/ao.webp",
         "media_type": "image/webp",
-        "sha256": "80e30d5d34caa5be95becb10bceb6f16adcb79d613c42d30caf47b349ef952db",
+        "sha256": "4d7ee8992d5e89036fc60bc22edfc836202ccbf6aa0c9cb8424b5d14a05f6bd9",
         "width_px": 1416,
         "height_px": 503,
-        "bytes": 106886
+        "bytes": 61102
       }
     },
     "side-rear": {
