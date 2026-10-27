@@ -20,7 +20,20 @@
     },
     "normal_convention": "opengl",
     "normal_strength": 2.25,
-    "ao_strength": 0.65
+    "ao_strength": 0.65,
+    "side_inner_correction": {
+      "reference_glb_sha256": "be51f1f363aa7d230d74b55230be0fdc40d6398953eab28f00a3bc5caa700353",
+      "source_image": "LATERAL INTERNA",
+      "source_uv_set": 2,
+      "method": "clean-weave-mirror-fill",
+      "crop_px": [
+        220,
+        30,
+        1120,
+        320
+      ],
+      "scope": "side-inner"
+    }
   },
   "faces": {
     "seat": {
@@ -181,26 +194,26 @@
       "base_color": {
         "uri": "./side-inner/base-color.webp",
         "media_type": "image/webp",
-        "sha256": "d2f353882e492efb792885914168d7ccd12aeb6d402aa6ce14968c105478ddef",
+        "sha256": "dbbe9344af412bb2f461443bbf8523f3e56568305377308b0faab8846f4fb9e7",
         "width_px": 1416,
         "height_px": 503,
-        "bytes": 233178
+        "bytes": 323840
       },
       "normal": {
         "uri": "./side-inner/normal.png",
         "media_type": "image/png",
-        "sha256": "f68ca1f0b52cb25e59adc9a2a55fed67df4a40b24f951ff34ecd5e598c954885",
+        "sha256": "e1704fa2de117444882f81f9924c741f4c77f9a1d90c2817ea137aae3d3a7f7f",
         "width_px": 1416,
         "height_px": 503,
-        "bytes": 1606041
+        "bytes": 1884286
       },
       "ambient_occlusion": {
         "uri": "./side-inner/ao.webp",
         "media_type": "image/webp",
-        "sha256": "14114fa01505f0113904b39ff10559230428a15adcab7c717ab8659b9f4e6839",
+        "sha256": "80e30d5d34caa5be95becb10bceb6f16adcb79d613c42d30caf47b349ef952db",
         "width_px": 1416,
         "height_px": 503,
-        "bytes": 87568
+        "bytes": 106886
       }
     },
     "side-rear": {
