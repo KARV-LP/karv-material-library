@@ -1,0 +1,49 @@
+name: Fix fabric-kv-009 side-inner
+
+on:
+  push:
+    branches:
+      - fix/fabric-kv-009-side-inner
+    paths:
+      - .github/workflows/fix-fabric-kv-009-side-inner.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/fabric-kv-009-side-inner
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install image pipeline
+        run: pip install pillow numpy
+
+      - name: Download approved Málaga 03 Scale Master
+        run: |
+          curl -L --fail --retry 3             "https://drive.usercontent.google.com/download?id=1vfB97PN6AYPagm-gR3LvaoOX8ggqj4Py&export=download&confirm=t"             -o /tmp/reference.glb
+          echo "be51f1f363aa7d230d74b55230be0fdc40d6398953eab28f00a3bc5caa700353  /tmp/reference.glb" | sha256sum -c -
+
+      - name: Correct side-inner only
+        run: python scripts/fix-fabric-kv-009-side-inner.py --reference-glb /tmp/reference.glb
+
+      - name: Validate public contract
+        run: node scripts/validate-public-catalog.mjs
+
+      - name: Remove one-time workflow
+        run: rm -f .github/workflows/fix-fabric-kv-009-side-inner.yml
+
+      - name: Commit corrected side-inner
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "fix: corrigir lateral interna do Málaga 03"
+          git push origin HEAD:fix/fabric-kv-009-side-inner
