@@ -136,7 +136,7 @@ def bake_face(face_key, source, target, source_uv_set, output_dir):
     bpy.context.view_layer.objects.active = target
 
     scene = bpy.context.scene
-    scene.render.engine = "BLENDER_EEVEE_NEXT"
+    scene.render.engine = "CYCLES"
     scene.render.bake.use_selected_to_active = True
     scene.render.bake.margin = 16
     scene.render.bake.use_clear = True
