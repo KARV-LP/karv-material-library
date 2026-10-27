@@ -181,26 +181,26 @@
       "base_color": {
         "uri": "./side-inner/base-color.webp",
         "media_type": "image/webp",
-        "sha256": "d2f353882e492efb792885914168d7ccd12aeb6d402aa6ce14968c105478ddef",
+        "sha256": "ffd35ffd8b45a5bb441d4f6a7f1ab34fef872ad3def2e07f8c695823ac16f7eb",
         "width_px": 1416,
         "height_px": 503,
-        "bytes": 233178
+        "bytes": 393682
       },
       "normal": {
         "uri": "./side-inner/normal.png",
         "media_type": "image/png",
-        "sha256": "f68ca1f0b52cb25e59adc9a2a55fed67df4a40b24f951ff34ecd5e598c954885",
+        "sha256": "142282a64e90627bd8021859811d4e33a28d1cb9862efadb826af5d088386f88",
         "width_px": 1416,
         "height_px": 503,
-        "bytes": 1606041
+        "bytes": 1769849
       },
       "ambient_occlusion": {
         "uri": "./side-inner/ao.webp",
         "media_type": "image/webp",
-        "sha256": "14114fa01505f0113904b39ff10559230428a15adcab7c717ab8659b9f4e6839",
+        "sha256": "4d7ee8992d5e89036fc60bc22edfc836202ccbf6aa0c9cb8424b5d14a05f6bd9",
         "width_px": 1416,
         "height_px": 503,
-        "bytes": 87568
+        "bytes": 61102
       }
     },
     "side-rear": {
