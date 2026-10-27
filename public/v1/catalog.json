@@ -518,22 +518,22 @@
       "face_set": "./assets/fabric-kv-009/face-set/metadata.json",
       "asset_integrity": {
         "base_color": {
-          "sha256": "c08a1f6c19da2611341772f80fee2f15c49ad7e97ce3f0d7d10d5a58c6b66141",
+          "sha256": "92bf5912875ae2d02ab199d2efb0910dcdd0438859a881635e8873646c3761bc",
           "width_px": 1536,
           "height_px": 2048,
-          "bytes": 514240
+          "bytes": 1452778
         },
         "normal": {
-          "sha256": "c1799cb91d54743e5702dacd4cb1f387749f9aa8e02539b5d4a11f31e10a2563",
+          "sha256": "015ed6aa126631319907bcb3c5a50dc690c0d8c4b6eba048f4b0e865f76ec64b",
           "width_px": 1536,
           "height_px": 2048,
-          "bytes": 3096743
+          "bytes": 9364670
         },
         "ao": {
-          "sha256": "b9ff5d63638eb7b32ecfe26ef0dfeebadce2b05c0caf562005af45bb0f9e11aa",
+          "sha256": "4fbcd820f2a884bdc0ad8f334aafe26111d2894e25e7a86e09ba16dc16f17b26",
           "width_px": 1536,
           "height_px": 2048,
-          "bytes": 254724
+          "bytes": 459798
         }
       },
       "pbr": {
