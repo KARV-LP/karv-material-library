@@ -1,3 +1,5 @@
+> Atualização do contrato por face: no consumidor atual, `faceAssets` usa `artUvSet` da superfície, com UV0 como fallback. As referências históricas abaixo a UV0 como destino universal não devem substituir esse vínculo. No Maia 10 — Vinho, transferir para o UV de arte canônico por face (UV1/UV2), sem alterar o runtime. Ver `docs/maia-10-vinho-preflight.md` e `scale-masters/fabric-kv-010/face-bake.json`.
+
 # GLB como Scale Master
 
 ## Objetivo

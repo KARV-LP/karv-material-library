@@ -1,0 +1,58 @@
+{
+  "seat": {
+    "source_uv_set": 1,
+    "target_uv_set": 1,
+    "reference_corners": 20076,
+    "max_target_uv_ambiguity": 0,
+    "status": "PASS"
+  },
+  "backrest-front": {
+    "source_uv_set": 1,
+    "target_uv_set": 1,
+    "reference_corners": 10524,
+    "max_target_uv_ambiguity": 0,
+    "status": "PASS"
+  },
+  "backrest-side": {
+    "source_uv_set": 2,
+    "target_uv_set": 2,
+    "reference_corners": 5703,
+    "max_target_uv_ambiguity": 0,
+    "status": "PASS"
+  },
+  "backrest-rear": {
+    "source_uv_set": 2,
+    "target_uv_set": 2,
+    "reference_corners": 20148,
+    "max_target_uv_ambiguity": 0,
+    "status": "PASS"
+  },
+  "side-outer": {
+    "source_uv_set": 1,
+    "target_uv_set": 1,
+    "reference_corners": 62850,
+    "max_target_uv_ambiguity": 0.0002362281084060669,
+    "status": "PASS"
+  },
+  "side-inner": {
+    "source_uv_set": 2,
+    "target_uv_set": 2,
+    "reference_corners": 64026,
+    "max_target_uv_ambiguity": 0,
+    "status": "PASS"
+  },
+  "side-rear": {
+    "source_uv_set": 2,
+    "target_uv_set": 2,
+    "reference_corners": 4215,
+    "max_target_uv_ambiguity": 0,
+    "status": "PASS"
+  },
+  "side-top": {
+    "source_uv_set": 2,
+    "target_uv_set": 2,
+    "method": "verified-direct-source-copy",
+    "max_uv_error": 0.00012224912643432617,
+    "status": "PASS"
+  }
+}

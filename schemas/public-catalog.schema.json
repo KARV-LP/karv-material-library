@@ -95,6 +95,7 @@
         "channel": { "enum": ["fabric", "karv_design"] },
         "name": { "type": "string", "minLength": 1 },
         "collection": { "type": "string", "minLength": 1 },
+        "category": { "enum": ["Impermeabilizado", "Linho", "Veludo", "Chenille", "Estampado", "Bouclé", "Suede", "Jacquard"] },
         "color": {
           "type": "object",
           "additionalProperties": false,

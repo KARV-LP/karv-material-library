@@ -1,0 +1,279 @@
+{
+  "$schema": "../schemas/surface-map.schema.json",
+  "schema_version": 1,
+  "geometry": {
+    "id": "karv-chair",
+    "version": 2,
+    "sha256": "923dabfc599034b87721b75abfe2da93149899128a0ba8a2cbc30502f3976a82",
+    "asset": "../assets/geometry/karv-chair/v2/base.glb"
+  },
+  "camera": {
+    "target_m": [0.266837072, 0.388909632, 0],
+    "default_orbit": {
+      "azimuth_deg": 0,
+      "polar_deg": 75,
+      "radius_m": 1.6
+    },
+    "limits": {
+      "min_azimuth_deg": -180,
+      "max_azimuth_deg": 180,
+      "min_polar_deg": 35,
+      "max_polar_deg": 90,
+      "min_radius_m": 0.9,
+      "max_radius_m": 3
+    },
+    "field_of_view_deg": 30,
+    "zoom_enabled": false,
+    "auto_rotate": false
+  },
+  "surfaces": [
+    {
+      "surface_id": "seat",
+      "public_name": "Assento",
+      "public_group": "Assento",
+      "classification": "configurable",
+      "binding": {
+        "mesh_name": "ASSENTO",
+        "material_name": "assento",
+        "primitive_index": 0,
+        "requires_material_instance": false
+      },
+      "texture_frame": {
+        "uv_set": 0,
+        "uv_name": "UVMap",
+        "art_uv_set": 1,
+        "art_uv_name": "UVMap.001",
+        "rotation_degrees": 0,
+        "flip_u": false,
+        "flip_v": false,
+        "meters_per_uv_unit": 1.264077,
+        "calibration_method": "area-ratio",
+        "calibration_status": "derived"
+      }
+    },
+    {
+      "surface_id": "backrest-front",
+      "public_name": "Frente do encosto",
+      "public_group": "Encosto",
+      "classification": "configurable",
+      "binding": {
+        "mesh_name": "ENCOSTO_FRONTAL",
+        "material_name": "encosto-frt",
+        "primitive_index": 0,
+        "requires_material_instance": false
+      },
+      "texture_frame": {
+        "uv_set": 0,
+        "uv_name": "UVMap",
+        "art_uv_set": 1,
+        "art_uv_name": "UVMap.001",
+        "rotation_degrees": 0,
+        "flip_u": false,
+        "flip_v": false,
+        "meters_per_uv_unit": 1.133041,
+        "calibration_method": "area-ratio",
+        "calibration_status": "derived"
+      }
+    },
+    {
+      "surface_id": "backrest-side",
+      "public_name": "Lateral do encosto",
+      "public_group": "Encosto",
+      "classification": "configurable",
+      "binding": {
+        "mesh_name": "ENCOSTO_LATERAL",
+        "material_name": "encosto lat",
+        "primitive_index": 0,
+        "requires_material_instance": false
+      },
+      "texture_frame": {
+        "uv_set": 0,
+        "uv_name": "UVMap",
+        "art_uv_set": 2,
+        "art_uv_name": "UVMap.002",
+        "rotation_degrees": 0,
+        "flip_u": false,
+        "flip_v": false,
+        "meters_per_uv_unit": 0.832865,
+        "calibration_method": "area-ratio",
+        "calibration_status": "derived"
+      }
+    },
+    {
+      "surface_id": "backrest-rear",
+      "public_name": "Traseira do encosto",
+      "public_group": "Encosto",
+      "classification": "configurable",
+      "binding": {
+        "mesh_name": "ENCOSTO_TRASEIRO",
+        "material_name": "encosto traseiro",
+        "primitive_index": 0,
+        "requires_material_instance": false
+      },
+      "texture_frame": {
+        "uv_set": 0,
+        "uv_name": "UVMap",
+        "art_uv_set": 2,
+        "art_uv_name": "UVMap.002",
+        "rotation_degrees": 0,
+        "flip_u": false,
+        "flip_v": false,
+        "meters_per_uv_unit": 1.206752,
+        "calibration_method": "area-ratio",
+        "calibration_status": "derived"
+      }
+    },
+    {
+      "surface_id": "side-outer",
+      "public_name": "Lateral externa",
+      "public_group": "Laterais",
+      "classification": "configurable",
+      "binding": {
+        "mesh_name": "LATERAL_EXTERNA",
+        "material_name": "lat ext ",
+        "primitive_index": 0,
+        "requires_material_instance": false
+      },
+      "texture_frame": {
+        "uv_set": 0,
+        "uv_name": "UVMap",
+        "art_uv_set": 1,
+        "art_uv_name": "UVMap.001",
+        "rotation_degrees": 0,
+        "flip_u": false,
+        "flip_v": false,
+        "meters_per_uv_unit": 1.083353,
+        "calibration_method": "area-ratio",
+        "calibration_status": "derived"
+      }
+    },
+    {
+      "surface_id": "side-inner",
+      "public_name": "Lateral interna",
+      "public_group": "Laterais",
+      "classification": "configurable",
+      "binding": {
+        "mesh_name": "LATERAL_INTERNA",
+        "material_name": "lat int",
+        "primitive_index": 0,
+        "requires_material_instance": false
+      },
+      "texture_frame": {
+        "uv_set": 0,
+        "uv_name": "UVMap",
+        "art_uv_set": 2,
+        "art_uv_name": "UVMap.002",
+        "rotation_degrees": 0,
+        "flip_u": false,
+        "flip_v": false,
+        "meters_per_uv_unit": 1.250502,
+        "calibration_method": "area-ratio",
+        "calibration_status": "derived"
+      }
+    },
+    {
+      "surface_id": "side-rear",
+      "public_name": "Traseira das laterais",
+      "public_group": "Laterais",
+      "classification": "configurable",
+      "binding": {
+        "mesh_name": "LATERAL_REAR",
+        "material_name": "lat rr",
+        "primitive_index": 0,
+        "requires_material_instance": false
+      },
+      "texture_frame": {
+        "uv_set": 0,
+        "uv_name": "UVMap",
+        "art_uv_set": 2,
+        "art_uv_name": "UVMap.002",
+        "rotation_degrees": 0,
+        "flip_u": false,
+        "flip_v": false,
+        "meters_per_uv_unit": 1.085726,
+        "calibration_method": "area-ratio",
+        "calibration_status": "derived"
+      }
+    },
+    {
+      "surface_id": "side-top",
+      "public_name": "Topo das laterais",
+      "public_group": "Laterais",
+      "classification": "configurable",
+      "binding": {
+        "mesh_name": "LATERAL_TOP",
+        "material_name": "Material.012",
+        "primitive_index": 0,
+        "requires_material_instance": false
+      },
+      "texture_frame": {
+        "uv_set": 0,
+        "uv_name": "UVMap",
+        "art_uv_set": 2,
+        "art_uv_name": "UVMap.002",
+        "rotation_degrees": 0,
+        "flip_u": false,
+        "flip_v": false,
+        "meters_per_uv_unit": 1.141259,
+        "calibration_method": "area-ratio",
+        "calibration_status": "derived"
+      }
+    },
+    {
+      "surface_id": "piping-seat",
+      "public_name": "Vivo do assento",
+      "public_group": "Vivos",
+      "classification": "configurable",
+      "binding": {
+        "mesh_name": "VIVO_ASSENTO",
+        "material_name": "VIVO",
+        "primitive_index": 0,
+        "requires_material_instance": true
+      },
+      "texture_frame": {
+        "uv_set": 0,
+        "uv_name": "UVMap",
+        "rotation_degrees": 0,
+        "flip_u": false,
+        "flip_v": false,
+        "meters_per_uv_unit": 2.248452,
+        "calibration_method": "area-ratio",
+        "calibration_status": "derived"
+      }
+    },
+    {
+      "surface_id": "piping-backrest",
+      "public_name": "Vivo do encosto",
+      "public_group": "Vivos",
+      "classification": "configurable",
+      "binding": {
+        "mesh_name": "VIVO_ENCOSTO",
+        "material_name": "VIVO",
+        "primitive_index": 0,
+        "requires_material_instance": true
+      },
+      "texture_frame": {
+        "uv_set": 0,
+        "uv_name": "UVMap",
+        "rotation_degrees": 0,
+        "flip_u": false,
+        "flip_v": false,
+        "meters_per_uv_unit": 1.568858,
+        "calibration_method": "area-ratio",
+        "calibration_status": "derived"
+      }
+    },
+    {
+      "surface_id": "feet",
+      "public_name": "Pés",
+      "public_group": "Estrutura",
+      "classification": "fixed",
+      "binding": {
+        "mesh_name": "PEZINHOS",
+        "material_name": "pezinhos",
+        "primitive_index": 0,
+        "requires_material_instance": false
+      }
+    }
+  ]
+}

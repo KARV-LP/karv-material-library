@@ -156,6 +156,7 @@ const allowedKeys = new Set([
   'channel',
   'name',
   'collection',
+  'category',
   'color',
   'material_type',
   'technologies',
@@ -184,6 +185,7 @@ for (const material of catalog.materials) {
   }
   if (ids.has(material.id)) throw new Error(`id público duplicado: ${material.id}`);
   ids.add(material.id);
+  if (material.category !== undefined && !['Impermeabilizado','Linho','Veludo','Chenille','Estampado','Bouclé','Suede','Jacquard'].includes(material.category)) throw new Error(`${material.id}: categoria inválida`);
   if (!allowedChannels.has(material.channel)) throw new Error(`${material.id}: channel inválido`);
   if (material.published !== true || material.ready_for_configurator !== true) {
     throw new Error(
