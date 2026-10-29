@@ -1,0 +1,50 @@
+{
+  "ASSENTO": {
+    "loops": 20076,
+    "unmatched": 20076,
+    "max_position_error_m": 0.0001987592113437131,
+    "max_source_frame_uv_error": 1.0383143424987793
+  },
+  "ENCOSTO_FRONTAL": {
+    "loops": 10524,
+    "unmatched": 10524,
+    "max_position_error_m": 0.0001850612461566925,
+    "max_source_frame_uv_error": 1.063419759273529
+  },
+  "ENCOSTO_LATERAL": {
+    "loops": 11406,
+    "unmatched": 11406,
+    "max_position_error_m": 2.9802322387695312e-08,
+    "max_source_frame_uv_error": 0.08563590049743652
+  },
+  "ENCOSTO_TRASEIRO": {
+    "loops": 20148,
+    "unmatched": 20092,
+    "max_position_error_m": 0.00014770834241062403,
+    "max_source_frame_uv_error": 0.07434612512588501
+  },
+  "LATERAL_EXTERNA": {
+    "loops": 125700,
+    "unmatched": 125700,
+    "max_position_error_m": 0.00019994378089904785,
+    "max_source_frame_uv_error": 0.5243034362792969
+  },
+  "LATERAL_INTERNA": {
+    "loops": 128052,
+    "unmatched": 128052,
+    "max_position_error_m": 5.960464477539063e-08,
+    "max_source_frame_uv_error": 1.1594035625457764
+  },
+  "LATERAL_REAR": {
+    "loops": 8430,
+    "unmatched": 8340,
+    "max_position_error_m": 5.960464477539063e-08,
+    "max_source_frame_uv_error": 0.11218643188476562
+  },
+  "LATERAL_TOP": {
+    "loops": 49776,
+    "unmatched": 0,
+    "max_position_error_m": 0.0001722112501738593,
+    "max_source_frame_uv_error": 0.00012224912643432617
+  }
+}

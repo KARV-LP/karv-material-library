@@ -9,3 +9,10 @@
 - Fontes que não sejam WebP só podem ser convertidas com autorização do usuário. Registre a conversão lossless e valide pixels visíveis, alpha, dimensões e hashes.
 - Antes de concluir, execute `node scripts/validate-public-catalog.mjs` e confirme que o workflow `Validate Public Material Contract` passou.
 \n## GLB Scale Master\n\n- Novos Revestimentos devem manter as 8 Base Colors oficiais por face e um `reference.glb` aprovado como Scale Master.\n- O Scale Master é referência técnica de escala visual, orientação e continuidade; nunca substitui nem altera o GLB canônico `karv-chair@2`.\n- A auditoria deve identificar o `TEXCOORD_n` usado pela Base Color em cada face. Quando o canal de origem não for UV0, a Base Color deve ser bakeada offline para UV0 antes da publicação.\n- A automação deve falhar em mapeamentos ambíguos, atlas, múltiplas primitives, imagens externas ou `KHR_texture_transform`; não inferir correções.\n- O configurador continua consumindo apenas Base Color por face + Normal OpenGL + AO. Não introduzir transformações de UV em runtime para corrigir escala de Revestimento.\n- Consulte `docs/SCALE-MASTER.md` para o contrato completo.\n
+
+## Contrato de UV para mapas por face (consumidor atual)
+
+- Antes de transferir um Scale Master, confira o canal que o consumidor realmente usa para `faceAssets`. No configurador atual, é `textureFrame.artUvSet` quando configurado; UV0 é o fallback.
+- O índice de canal igual não comprova UVs iguais. Valide coordenadas, escala e simetria. Faça bake offline do canal da referência para o frame da face canônica quando os UVs diferirem.
+- A exigência anterior de UV0 como destino universal é substituída por esse contrato para face-sets. Não alterar UVs, geometria ou transformações no navegador para corrigir Revestimento.
+- Uma referência de um lado é aceita quando a correspondência dos lados simétricos do canônico é demonstrada. Contagem de triângulos diferente não é bloqueador isolado.

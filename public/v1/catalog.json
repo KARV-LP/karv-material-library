@@ -553,6 +553,83 @@
         ],
         "min_geometry_version": 2
       }
+    },
+    {
+      "id": "fabric-kv-010",
+      "channel": "fabric",
+      "name": "Maia 10 — Vinho",
+      "category": "Veludo",
+      "collection": "MAIA",
+      "color": {
+        "name": "Vinho",
+        "family": "vinho"
+      },
+      "material_type": "veludo",
+      "technologies": [],
+      "functional": {
+        "pet_friendly": null,
+        "water_repellency": null,
+        "easy_clean": null,
+        "indoor_use": true,
+        "outdoor_use": null
+      },
+      "appearance": {
+        "texture": "veludo",
+        "touch": "macio",
+        "sheen": null,
+        "visual_character": [
+          "vinho",
+          "aveludado"
+        ]
+      },
+      "physical_reference_cm": {
+        "width": 120,
+        "height": 60
+      },
+      "assets": {
+        "preview": "./assets/fabric-kv-010/preview.webp",
+        "base_color": "./assets/fabric-kv-010/base-color.webp",
+        "normal": "./assets/fabric-kv-010/normal.png",
+        "ao": "./assets/fabric-kv-010/ao.webp"
+      },
+      "face_set": "./assets/fabric-kv-010/face-set/metadata.json",
+      "asset_integrity": {
+        "base_color": {
+          "sha256": "c6181823a3e6cd5e66126e70b431533f440309793ccd676a6fa4ebb802790e80",
+          "width_px": 1701,
+          "height_px": 2269,
+          "bytes": 1121026
+        },
+        "normal": {
+          "sha256": "d7689824b6f76f30fdd826dd6c23f91925b47b901753a9e8fb1cd8dcc91956cb",
+          "width_px": 1701,
+          "height_px": 2269,
+          "bytes": 2098761
+        },
+        "ao": {
+          "sha256": "a2aa41e4c26c3706b6741a5c7e5c6f375f784fd07213f89def4653eab5717bb2",
+          "width_px": 1701,
+          "height_px": 2269,
+          "bytes": 7430
+        }
+      },
+      "pbr": {
+        "status": "production",
+        "roughness_factor": 0.88,
+        "metalness": 0,
+        "normal_convention": "opengl",
+        "normal_strength": 1,
+        "ao_strength": 1
+      },
+      "published": true,
+      "ready_for_configurator": true,
+      "pbr_ready": true,
+      "compatibility": {
+        "geometry_ids": [
+          "karv-chair"
+        ],
+        "min_geometry_version": 2
+      }
     }
   ]
 }

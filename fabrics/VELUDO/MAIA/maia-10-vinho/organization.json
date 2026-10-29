@@ -16,7 +16,7 @@
     "Maia 10 — Vinho"
   ],
   "published": false,
-  "ready_for_configurator": false,
+  "ready_for_configurator": true,
   "source_face_files": [
     "Assento.webp",
     "ENCOSTO_FRONTAL.webp",
@@ -32,6 +32,6 @@
     "category": "Veludo",
     "collection": "MAIA",
     "asset_directory": "public/v1/assets/fabric-kv-010/",
-    "status": "pending_uv0_bake_and_visual_review"
+    "status": "preview_ready_pending_visual_approval"
   }
 }

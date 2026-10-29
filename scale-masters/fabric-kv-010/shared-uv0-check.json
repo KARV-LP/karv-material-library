@@ -1,0 +1,50 @@
+{
+  "ASSENTO": {
+    "loops": 20076,
+    "unmatched": 0,
+    "max_position_error_m": 0,
+    "max_uv0_error": 0
+  },
+  "ENCOSTO_FRONTAL": {
+    "loops": 10524,
+    "unmatched": 0,
+    "max_position_error_m": 0,
+    "max_uv0_error": 0
+  },
+  "ENCOSTO_LATERAL": {
+    "loops": 11406,
+    "unmatched": 0,
+    "max_position_error_m": 2.9802322387695312e-08,
+    "max_uv0_error": 0
+  },
+  "ENCOSTO_TRASEIRO": {
+    "loops": 20148,
+    "unmatched": 0,
+    "max_position_error_m": 0,
+    "max_uv0_error": 0
+  },
+  "LATERAL_EXTERNA": {
+    "loops": 125700,
+    "unmatched": 0,
+    "max_position_error_m": 5.0008296966552734e-05,
+    "max_uv0_error": 0
+  },
+  "LATERAL_INTERNA": {
+    "loops": 128052,
+    "unmatched": 0,
+    "max_position_error_m": 5.960464477539063e-08,
+    "max_uv0_error": 0
+  },
+  "LATERAL_REAR": {
+    "loops": 8430,
+    "unmatched": 0,
+    "max_position_error_m": 5.960464477539063e-08,
+    "max_uv0_error": 0
+  },
+  "LATERAL_TOP": {
+    "loops": 49776,
+    "unmatched": 0,
+    "max_position_error_m": 4.7773122787475586e-05,
+    "max_uv0_error": 0
+  }
+}
