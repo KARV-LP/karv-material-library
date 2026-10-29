@@ -2,7 +2,7 @@
   "schema": "karv.scale-master-geometry-preflight/1",
   "blender_version": "4.5.3 LTS",
   "canonical_sha256": "923dabfc599034b87721b75abfe2da93149899128a0ba8a2cbc30502f3976a82",
-  "reference_sha256": "c2734d97cdb8ceaaedf14e68d3002e3819ecb8005a8759bc7e55ce69c83999be",
+  "reference_sha256": "b1cce4cb3aa63fb0f31418d30c727829b06791564e9f09e086a3431e2e6733d8",
   "bounds_tolerance_m": 0.0001,
   "canonical": {
     "ASSENTO": {

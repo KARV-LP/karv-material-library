@@ -1,27 +1,22 @@
 {
   "file": "reference.glb",
-  "bytes": 24058496,
-  "sha256": "c2734d97cdb8ceaaedf14e68d3002e3819ecb8005a8759bc7e55ce69c83999be",
+  "bytes": 20992820,
+  "sha256": "b1cce4cb3aa63fb0f31418d30c727829b06791564e9f09e086a3431e2e6733d8",
   "parts": [
     {
       "file": "reference.glb.part-001",
       "bytes": 8000000,
-      "sha256": "ecfcc986073c21c23d91fa02df1af0764399a75e299ffbaa273b5ef562943383"
+      "sha256": "e5029e349144965f9e313a95a0292c7d860d8a0be9e9896a4db58aac8158e3f2"
     },
     {
       "file": "reference.glb.part-002",
       "bytes": 8000000,
-      "sha256": "11944a2089995e4164d6908730ccd391bfbe230e8c6f2462ae9568a7da0e3509"
+      "sha256": "b6991c981aa42899795336e09f5fa32bd6f831ffde248ac70e11f724092c076d"
     },
     {
       "file": "reference.glb.part-003",
-      "bytes": 8000000,
-      "sha256": "89e11bbf0221e560e9d7bcec02fa94720a60d4a0044977e7390af9f0b2cb107a"
-    },
-    {
-      "file": "reference.glb.part-004",
-      "bytes": 58496,
-      "sha256": "2bbd436a4619286f41eb85b203beef08fefca741146ec6d3ab30d539ca7e4b75"
+      "bytes": 4992820,
+      "sha256": "4f590985715f5018c9916accfdfb73e4ffcf22b2e8d05d1d2b91a4239c0a8734"
     }
   ]
 }

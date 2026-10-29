@@ -2,8 +2,8 @@
   "schema": "karv.scale-master-audit/1",
   "reference_glb": {
     "file": "reference.glb",
-    "bytes": 24058496,
-    "sha256": "c2734d97cdb8ceaaedf14e68d3002e3819ecb8005a8759bc7e55ce69c83999be",
+    "bytes": 20992820,
+    "sha256": "b1cce4cb3aa63fb0f31418d30c727829b06791564e9f09e086a3431e2e6733d8",
     "generator": "Khronos glTF Blender I/O v5.2.39"
   },
   "policy": {
@@ -21,8 +21,8 @@
       "source_image": {
         "name": "ASSENTO",
         "mime_type": "image/webp",
-        "bytes": 828850,
-        "sha256": "5f129c28a1ed1388a2945ab94b8ef06afe4d109919e433fa5bbbf2992c9f492e"
+        "bytes": 824006,
+        "sha256": "818f1a5910097f91fae36ad9add9d5cbf165b772b62bb2064026450a6e45abbd"
       }
     },
     "backrest-front": {
@@ -33,8 +33,8 @@
       "source_image": {
         "name": "ENCOSTO FRONTAL",
         "mime_type": "image/webp",
-        "bytes": 423348,
-        "sha256": "5089013a85d7ced7388906fdb32ec4c993ba26683af48fa5c7d91bb05b2b09aa"
+        "bytes": 562092,
+        "sha256": "f6f93145c251f8d7c054ff4fedbb614f4c7531a22d1b7d907deaaa55f7873821"
       }
     },
     "backrest-side": {
@@ -45,8 +45,8 @@
       "source_image": {
         "name": "ENCOSTO LATERAL",
         "mime_type": "image/webp",
-        "bytes": 69354,
-        "sha256": "d4f35ede0bc6b13cd97887828ba7558788cbeebe5da41934e1cffd65b7eecb0f"
+        "bytes": 95560,
+        "sha256": "38699a8a189d40cbfe526209d4a7ce86e133a51c1667de7f9e5641701bee64e3"
       }
     },
     "backrest-rear": {
@@ -57,8 +57,8 @@
       "source_image": {
         "name": "ENCOSTO TRASEITO",
         "mime_type": "image/webp",
-        "bytes": 828798,
-        "sha256": "9ab94b498b5499b366cec1739d17b65496909b4534722a2dad8df4969151fab6"
+        "bytes": 821074,
+        "sha256": "dd3faa5a857a1f172bd4a508b66b38c1eb975af44f1b9e53a0f28f141da610e2"
       }
     },
     "side-outer": {
@@ -69,8 +69,8 @@
       "source_image": {
         "name": "LATERAL EXTERNA",
         "mime_type": "image/webp",
-        "bytes": 1333198,
-        "sha256": "7bc28adb5147f4dc8623724533694e4f9391d7b0235376e0b7c2f918431e0fc3"
+        "bytes": 784108,
+        "sha256": "90baa28241c37be9f65caf20472ed84c0223b4787fb83958a93e78dfa0710459"
       }
     },
     "side-inner": {
@@ -81,8 +81,8 @@
       "source_image": {
         "name": "LATERAL INTERNA",
         "mime_type": "image/webp",
-        "bytes": 129462,
-        "sha256": "821ac6f8a443a9d54fb1a0ac6a55d05b179bb8323039948021d48c6e3baf9182"
+        "bytes": 161146,
+        "sha256": "fbdb2f4b99f243a4191f9b649e82b73a60fef8a5b56ef42f41645ebec50efaf8"
       }
     },
     "side-rear": {
@@ -93,8 +93,8 @@
       "source_image": {
         "name": "LATERAL REAR",
         "mime_type": "image/webp",
-        "bytes": 82584,
-        "sha256": "98e4e1e788d8d041f76ec593d9d55c1d20664a35763398eb9b0ce6f32849ffe7"
+        "bytes": 112550,
+        "sha256": "1c968d7afa8db379de58e03d077e3c70d40bee3bac6d041f51a1dc91f326f12f"
       }
     },
     "side-top": {
@@ -105,8 +105,8 @@
       "source_image": {
         "name": "LATERAL SUPERIOR",
         "mime_type": "image/webp",
-        "bytes": 181916,
-        "sha256": "d887318046249aea92c0325fcef1e30c67a608b65cb438da30243f361bbc463f"
+        "bytes": 180254,
+        "sha256": "0bb974d02e1ea9fa9478f7fd736cc656a876d69719c88d67e69d26b4fef97c21"
       }
     }
   }
