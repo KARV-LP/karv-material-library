@@ -1,0 +1,113 @@
+{
+  "schema": "karv.scale-master-audit/1",
+  "reference_glb": {
+    "file": "reference.glb",
+    "bytes": 24058496,
+    "sha256": "c2734d97cdb8ceaaedf14e68d3002e3819ecb8005a8759bc7e55ce69c83999be",
+    "generator": "Khronos glTF Blender I/O v5.2.39"
+  },
+  "policy": {
+    "target_uv_set": 0,
+    "runtime_geometry_unchanged": true,
+    "runtime_uv_unchanged": true,
+    "ambiguous_mapping": "fail"
+  },
+  "faces": {
+    "seat": {
+      "mesh_name": "ASSENTO",
+      "source_uv_set": 1,
+      "source_uv_attribute": "TEXCOORD_1",
+      "requires_uv0_bake": true,
+      "source_image": {
+        "name": "ASSENTO",
+        "mime_type": "image/webp",
+        "bytes": 828850,
+        "sha256": "5f129c28a1ed1388a2945ab94b8ef06afe4d109919e433fa5bbbf2992c9f492e"
+      }
+    },
+    "backrest-front": {
+      "mesh_name": "ENCOSTO_FRONTAL",
+      "source_uv_set": 1,
+      "source_uv_attribute": "TEXCOORD_1",
+      "requires_uv0_bake": true,
+      "source_image": {
+        "name": "ENCOSTO FRONTAL",
+        "mime_type": "image/webp",
+        "bytes": 423348,
+        "sha256": "5089013a85d7ced7388906fdb32ec4c993ba26683af48fa5c7d91bb05b2b09aa"
+      }
+    },
+    "backrest-side": {
+      "mesh_name": "ENCOSTO_LATERAL",
+      "source_uv_set": 2,
+      "source_uv_attribute": "TEXCOORD_2",
+      "requires_uv0_bake": true,
+      "source_image": {
+        "name": "ENCOSTO LATERAL",
+        "mime_type": "image/webp",
+        "bytes": 69354,
+        "sha256": "d4f35ede0bc6b13cd97887828ba7558788cbeebe5da41934e1cffd65b7eecb0f"
+      }
+    },
+    "backrest-rear": {
+      "mesh_name": "ENCOSTO_TRASEIRO",
+      "source_uv_set": 2,
+      "source_uv_attribute": "TEXCOORD_2",
+      "requires_uv0_bake": true,
+      "source_image": {
+        "name": "ENCOSTO TRASEITO",
+        "mime_type": "image/webp",
+        "bytes": 828798,
+        "sha256": "9ab94b498b5499b366cec1739d17b65496909b4534722a2dad8df4969151fab6"
+      }
+    },
+    "side-outer": {
+      "mesh_name": "LATERAL_EXTERNA",
+      "source_uv_set": 1,
+      "source_uv_attribute": "TEXCOORD_1",
+      "requires_uv0_bake": true,
+      "source_image": {
+        "name": "LATERAL EXTERNA",
+        "mime_type": "image/webp",
+        "bytes": 1333198,
+        "sha256": "7bc28adb5147f4dc8623724533694e4f9391d7b0235376e0b7c2f918431e0fc3"
+      }
+    },
+    "side-inner": {
+      "mesh_name": "LATERAL_INTERNA",
+      "source_uv_set": 2,
+      "source_uv_attribute": "TEXCOORD_2",
+      "requires_uv0_bake": true,
+      "source_image": {
+        "name": "LATERAL INTERNA",
+        "mime_type": "image/webp",
+        "bytes": 129462,
+        "sha256": "821ac6f8a443a9d54fb1a0ac6a55d05b179bb8323039948021d48c6e3baf9182"
+      }
+    },
+    "side-rear": {
+      "mesh_name": "LATERAL_REAR",
+      "source_uv_set": 2,
+      "source_uv_attribute": "TEXCOORD_2",
+      "requires_uv0_bake": true,
+      "source_image": {
+        "name": "LATERAL REAR",
+        "mime_type": "image/webp",
+        "bytes": 82584,
+        "sha256": "98e4e1e788d8d041f76ec593d9d55c1d20664a35763398eb9b0ce6f32849ffe7"
+      }
+    },
+    "side-top": {
+      "mesh_name": "LATERAL_TOP",
+      "source_uv_set": 2,
+      "source_uv_attribute": "TEXCOORD_2",
+      "requires_uv0_bake": true,
+      "source_image": {
+        "name": "LATERAL SUPERIOR",
+        "mime_type": "image/webp",
+        "bytes": 181916,
+        "sha256": "d887318046249aea92c0325fcef1e30c67a608b65cb438da30243f361bbc463f"
+      }
+    }
+  }
+}

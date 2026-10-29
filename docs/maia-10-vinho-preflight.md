@@ -1,6 +1,6 @@
 # Maia 10 — Vinho: conferência de entrada (issue #17)
 
-Status: **pré-auditoria concluída; publicação bloqueada**.
+Status: **conversão lossless autorizada e concluída; auditoria de texturas PASS; bake bloqueado por cobertura geométrica incompleta**.
 
 Este documento registra a preparação da inclusão. O Revestimento ainda não foi adicionado ao catálogo e não está disponível no configurador.
 
@@ -43,20 +43,53 @@ A normalização dos nomes de saída deve mapear `ENCOSTO TRASEITO.png` para Enc
 - `LATERAL REAR.png`: `0045327b389282d8199db152ad04d77b007b066f4da6a02145463d75a9494449`
 - `LATERAL SUPERIOR.png`: `2f8bc2794fe93f4a30036ba3e065a10eb99a862741ce9f65f3bad929a3149cd9`
 
+## Conversão autorizada em 29/10/2026
+
+O usuário autorizou expressamente a conversão dos oito PNGs e das texturas de uma cópia técnica do GLB para WebP lossless, preservando os originais.
+
+- Fontes convertidas sem redução de resolução, com `lossless=True`, `exact=True`, `method=6` (Pillow).
+- Comparação após decodificação: **8/8 pixels RGBA, alpha e dimensões idênticos**.
+- SHA-256 do original preservado: `08fa98000910bb901636983086aaa5cdd8d998f4a169f1090d5be877bd3f8b8d`.
+- A cópia técnica altera apenas o armazenamento das oito imagens/texturas e adiciona `EXT_texture_webp`; meshes, accessors, UVs, materiais e nodes permanecem iguais.
+- Arquivos e manifesto: `scale-masters/fabric-kv-010/`. O GLB técnico é transportado em quatro partes binárias; `assemble-reference.py` recompõe o arquivo e confere SHA-256 (ver README da pasta). São fontes técnicas, não assets públicos prontos para o configurador.
+- Reprodução: `python scripts/prepare-maia-10-vinho.py INPUT_DIR scale-masters/fabric-kv-010` (requer Pillow). INPUT_DIR deve conter `reference.glb` original e os oito PNGs.
+
 ## Validação executada
 
-- `node scripts/validate-public-catalog.mjs`: **PASS**, 7 Revestimentos existentes. Esse resultado valida somente a situação atual; não valida a inclusão do Maia.
-- `node scripts/scale-master-audit.mjs ../inputs/reference.glb ../inputs/scale-master.json`: **FAIL**, `seat: Scale Master V1 exige Base Color WebP embutida`.
-- A leitura adicional de estrutura/UVs e comparação dos PNGs é uma pré-auditoria; não substitui o relatório oficial `karv.scale-master-audit/1`.
+- `node scripts/scale-master-audit.mjs scale-masters/fabric-kv-010/reference.glb scale-masters/fabric-kv-010/audit.json`: **PASS**. Todas as oito Base Colors WebP embutidas; UV1/UV2 presentes e sem transformações de textura nas oito faces oficiais.
+- `node scripts/validate-public-catalog.mjs`: **PASS**, 7 Revestimentos existentes. Esse resultado ainda não valida uma inclusão do Maia.
+- Conferência adicional em Blender 4.5.3 LTS: **BLOCKED** por cobertura geométrica incompleta em cinco superfícies. O relatório é `scale-masters/fabric-kv-010/geometry-comparison.json`.
+
+## Bloqueador confirmado no Blender
+
+O GLB de referência contém somente um lado nas cinco superfícies abaixo. A geometria canônica contém os dois lados. A diferença foi confirmada por contagem de triângulos e limites em coordenadas mundiais, não apenas por contagem de vértices.
+
+| Superfície | Triângulos no canônico | Triângulos na referência |
+| --- | ---: | ---: |
+| Encosto lateral | 3.802 | 1.901 |
+| Lateral externa | 41.900 | 20.950 |
+| Lateral interna | 42.684 | 21.342 |
+| Lateral traseira | 2.810 | 1.405 |
+| Tira superior | 16.592 | 8.296 |
+
+Assento, Encosto Frontal e Encosto Traseiro têm a mesma cobertura básica nesta conferência. Isso não equivale a aprovação visual.
+
+Não foi executado bake parcial, espelhamento inferido nem publicação. A referência atual não fornece a correspondência do lado ausente. Publicar assim poderia reproduzir erros de escala/aplicação.
+
+### Como reproduzir a verificação de cobertura
+
+```sh
+blender -b --python-exit-code 1 --python scripts/compare-scale-master-geometry.py -- CANONICAL_GLB scale-masters/fabric-kv-010/reference.glb scale-masters/fabric-kv-010/geometry-comparison.json
+```
+
+O comando deve falhar neste GLB. Canônico lido de `KARV-LP/configurador-3d`, `assets/geometry/karv-chair/v2/base.glb`, SHA-256 `923dabfc599034b87721b75abfe2da93149899128a0ba8a2cbc30502f3976a82`. O teste de cobertura é condição necessária, não aprovação completa de correspondência geométrica/UV/visual.
 
 ## Pendências para concluir no mesmo PR
 
-1. Obter autorização expressa para converter os oito PNGs e as respectivas texturas embutidas numa cópia técnica do GLB para WebP lossless. O original deve permanecer intacto. Regra em `AGENTS.md`: “Fontes que não sejam WebP só podem ser convertidas com autorização do usuário.”
-2. Validar dimensões, pixels visíveis, alpha e hashes; executar novamente a auditoria oficial no derivado técnico, sem relaxar o validador.
-3. Validar visualmente o Scale Master; obter o GLB canônico `karv-chair@2` e executar o bake offline para UV0.
-4. Gerar Normal OpenGL, AO, thumbnail do Assento e `piping` como cópia binária da tira superior.
-5. Adicionar face-set, metadata e entrada no catálogo público no mesmo PR; confirmar a categoria Veludo no consumidor sem editar `configurador-3d`.
-6. Executar validação do catálogo e workflow `Validate Public Material Contract` após a inclusão.
-7. Apresentar preview e validar as oito faces, cor/escala e continuidade 360°, com atenção à lateral interna versus externa; aguardar aprovação visual antes de merge.
+1. Receber GLB Scale Master completo, com ambos os lados das cinco superfícies e Revestimento/UVs corretos. Conferir na exportação se os modificadores de espelhamento foram aplicados/exportados; esta é uma possível causa, não um diagnóstico do arquivo .blend.
+2. Repetir conversão e auditorias no arquivo corrigido; confirmar visualmente o Scale Master.
+3. Executar bake offline para UV0, gerar Normal OpenGL, AO, thumbnail do Assento e `piping` como cópia binária da tira superior.
+4. Revalidar o próximo ID candidato `fabric-kv-010`, adicionar face-set, metadata e entrada no catálogo público no mesmo PR, e confirmar categoria Veludo no consumidor.
+5. Executar validador e workflow após inclusão dos assets. Apresentar preview e validar cor, escala e continuidade 360° antes de merge.
 
-Nenhuma conversão, bake, publicação ou alteração do GLB canônico foi executada nesta etapa.
+O Revestimento Maia ainda não está publicado; o configurador e o GLB canônico permanecem intactos.

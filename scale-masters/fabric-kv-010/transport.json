@@ -1,0 +1,27 @@
+{
+  "file": "reference.glb",
+  "bytes": 24058496,
+  "sha256": "c2734d97cdb8ceaaedf14e68d3002e3819ecb8005a8759bc7e55ce69c83999be",
+  "parts": [
+    {
+      "file": "reference.glb.part-001",
+      "bytes": 8000000,
+      "sha256": "ecfcc986073c21c23d91fa02df1af0764399a75e299ffbaa273b5ef562943383"
+    },
+    {
+      "file": "reference.glb.part-002",
+      "bytes": 8000000,
+      "sha256": "11944a2089995e4164d6908730ccd391bfbe230e8c6f2462ae9568a7da0e3509"
+    },
+    {
+      "file": "reference.glb.part-003",
+      "bytes": 8000000,
+      "sha256": "89e11bbf0221e560e9d7bcec02fa94720a60d4a0044977e7390af9f0b2cb107a"
+    },
+    {
+      "file": "reference.glb.part-004",
+      "bytes": 58496,
+      "sha256": "2bbd436a4619286f41eb85b203beef08fefca741146ec6d3ab30d539ca7e4b75"
+    }
+  ]
+}
