@@ -1,0 +1,37 @@
+{
+  "schema": "karv.fabric-organization/1",
+  "material_id_candidate": "fabric-kv-010",
+  "name": "Maia 10 — Vinho",
+  "channel": "fabric",
+  "category": "Veludo",
+  "collection": "MAIA",
+  "color": {
+    "name": "Vinho",
+    "family": "vinho"
+  },
+  "library_path": [
+    "Tecidos",
+    "VELUDO",
+    "MAIA",
+    "Maia 10 — Vinho"
+  ],
+  "published": false,
+  "ready_for_configurator": false,
+  "source_face_files": [
+    "Assento.webp",
+    "ENCOSTO_FRONTAL.webp",
+    "ENCOSTO_LATERAL.webp",
+    "ENCOSTO_TRASEIRO.webp",
+    "LATERAL_EXTERNA.webp",
+    "LATERAL_INTERNA.webp",
+    "LATERAL_REAR.webp",
+    "LATERAL_TOP.webp"
+  ],
+  "scale_master_directory": "../../../../scale-masters/fabric-kv-010/",
+  "publication": {
+    "category": "Veludo",
+    "collection": "MAIA",
+    "asset_directory": "public/v1/assets/fabric-kv-010/",
+    "status": "pending_uv0_bake_and_visual_review"
+  }
+}
